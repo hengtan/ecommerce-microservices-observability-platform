@@ -1,0 +1,38 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Run tests
+      run: dotnet test --collect:"XPlat Code Coverage"
+
+    - name: Generate Code Coverage Report
+      run: |
+        dotnet tool install --global coverlet.console
+        coverlet ./bin/Debug/net6.0/ProjetoPagamentosAspNetCore.dll --target "dotnet" --targetargs "test" --output "coverage.json"
+
+    - name: Upload coverage results
+      uses: codecov/codecov-action@v2
+      with:
+        file: coverage.json
