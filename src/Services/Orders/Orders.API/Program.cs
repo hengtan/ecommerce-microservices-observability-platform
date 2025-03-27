@@ -1,6 +1,9 @@
 using EcommerceModular.Application;
 using EcommerceModular.Application.Common.Metrics;
 using EcommerceModular.Infrastructure;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using MongoDB.Driver;
 using Orders.API.Monitoring;
 using Prometheus;
 using Serilog;
@@ -26,8 +29,32 @@ builder.Services.AddSingleton<IOrderMetrics, PrometheusOrderMetrics>();
 
 // Controllers + Swagger
 builder.Services.AddControllers();
+
+builder.Services.AddHealthChecks()
+    .AddNpgSql(
+        builder.Configuration.GetConnectionString("DefaultConnection")!,
+        name: "postgresql",
+        timeout: TimeSpan.FromSeconds(5),
+        tags: new[] { "db", "sql" }
+    )
+    .AddMongoDb(
+        sp => new MongoClient(builder.Configuration["MongoSettings:ConnectionString"]),
+        name: "mongodb",
+        timeout: TimeSpan.FromSeconds(5),
+        tags: new[] { "db", "mongo" }
+    )
+    .AddRedis(
+        builder.Configuration.GetConnectionString("Redis")!,
+        name: "redis",
+        timeout: TimeSpan.FromSeconds(5),
+        tags: ["cache", "redis"]
+    );
+
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.EnableAnnotations();
+});
 
 // (Optional) Health Checks
 builder.Services.AddHealthChecks();
@@ -61,7 +88,22 @@ app.UseSerilogRequestLogging(); // Log HTTP requests
 app.MapControllers();
 
 // Health endpoints (optional)
-app.MapHealthChecks("/health/live");
-app.MapHealthChecks("/health/ready");
+app.MapHealthChecks("/health/live", new HealthCheckOptions
+{
+    Predicate = _ => true,
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = r => r.Tags.Contains("ready"),
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    Predicate = _ => true,
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
 
 app.Run();
