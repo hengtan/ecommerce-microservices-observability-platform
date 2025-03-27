@@ -19,7 +19,8 @@ public class OrdersController(IMediator mediator) : ControllerBase
     [HttpGet("{id:guid}")]
     public async Task<IActionResult> GetById(Guid id)
     {
-        var result = await mediator.Send(new GetOrderByIdQuery(id));
+        var query = new GetOrderByIdQuery(id);
+        var result = await mediator.Send(query);
 
         if (result is null)
             return NotFound();
