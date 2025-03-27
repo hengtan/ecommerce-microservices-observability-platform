@@ -9,3 +9,6 @@ scrape_configs:
         labels:
           service: 'orders-api'
           env: 'dev'
+  - job_name: 'kafka-exporter'
+    static_configs:
+      - targets: [ 'kafka-exporter:9308' ]
