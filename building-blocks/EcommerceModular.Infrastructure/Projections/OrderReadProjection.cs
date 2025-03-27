@@ -1,34 +1,51 @@
 using System.Text.Json;
 using EcommerceModular.Application.Interfaces.Persistence;
+using EcommerceModular.Application.Models;
 using EcommerceModular.Domain.Entities;
+using EcommerceModular.Infrastructure.Configurations;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace EcommerceModular.Infrastructure.Projections;
 
 public class OrderReadProjection : IOrderReadProjection
 {
-    private readonly IMongoCollection<Order> _collection;
-    private const string _backupPath = "OrderBackups";
+    private readonly IMongoCollection<ProjectedOrder> _collection;
 
-    public OrderReadProjection(IMongoClient mongoClient)
+    public OrderReadProjection(IOptions<MongoSettings> mongoSettings)
     {
-        var database = mongoClient.GetDatabase("orders_read");
-        _collection = database.GetCollection<Order>("orders");
-
-        if (!Directory.Exists(_backupPath))
-        {
-            Directory.CreateDirectory(_backupPath);
-        }
+        var client = new MongoClient(mongoSettings.Value.ConnectionString);
+        var database = client.GetDatabase(mongoSettings.Value.DatabaseName);
+        _collection = database.GetCollection<ProjectedOrder>("orders_read");
     }
 
-    public async Task ProjectAsync(Order order, CancellationToken cancellationToken = default)
+    public async Task ProjectAsync(Order order, CancellationToken cancellationToken)
     {
-        // Save to MongoDB
-        await _collection.InsertOneAsync(order, cancellationToken: cancellationToken);
+        var projected = new ProjectedOrder
+        {
+            Id = order.Id,
+            CustomerId = order.CustomerId,
+            CreatedAt = order.CreatedAt,
+            Items = order.Items.Select(i => new ProjectedOrderItem
+            {
+                ProductId = i.ProductId,
+                ProductName = i.ProductName,
+                Quantity = i.Quantity,
+                UnitPrice = i.UnitPrice
+            }).ToList()
+        };
 
-        // Also write to .txt file (backup)
-        var fileName = Path.Combine(_backupPath, $"order_{order.Id}.txt");
-        var content = JsonSerializer.Serialize(order, new JsonSerializerOptions { WriteIndented = true });
-        await File.WriteAllTextAsync(fileName, content, cancellationToken);
+        await _collection.ReplaceOneAsync(
+            filter: Builders<ProjectedOrder>.Filter.Eq(o => o.Id, order.Id),
+            replacement: projected,
+            options: new ReplaceOptions { IsUpsert = true },
+            cancellationToken: cancellationToken
+        );
+    }
+
+    public async Task<ProjectedOrder?> GetByIdAsync(Guid orderId, CancellationToken cancellationToken)
+    {
+        var filter = Builders<ProjectedOrder>.Filter.Eq(o => o.Id, orderId);
+        return await _collection.Find(filter).FirstOrDefaultAsync(cancellationToken);
     }
 }

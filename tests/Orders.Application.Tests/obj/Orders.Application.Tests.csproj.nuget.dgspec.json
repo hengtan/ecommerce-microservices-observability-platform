@@ -186,7 +186,7 @@
           "dependencies": {
             "Bogus": {
               "target": "Package",
-              "version": "[35.0.0, )"
+              "version": "[35.0.1, )"
             },
             "FluentAssertions": {
               "target": "Package",

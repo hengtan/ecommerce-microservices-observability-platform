@@ -799,6 +799,7 @@
           "Microsoft.Extensions.Caching.StackExchangeRedis": "9.0.2",
           "Microsoft.Extensions.Configuration.Binder": "9.0.3",
           "MongoDB.Driver": "3.2.1",
+          "Newtonsoft.Json": "13.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "StackExchange.Redis": "2.8.31"
         },

@@ -1821,7 +1821,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Bogus >= 35.0.0",
+      "Bogus >= 35.0.1",
       "EcommerceModular.Application >= 1.0.0",
       "FluentAssertions >= 8.2.0",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
@@ -1881,7 +1881,7 @@
         "dependencies": {
           "Bogus": {
             "target": "Package",
-            "version": "[35.0.0, )"
+            "version": "[35.0.1, )"
           },
           "FluentAssertions": {
             "target": "Package",
@@ -1933,17 +1933,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Orders.Application.Tests depends on Bogus (>= 35.0.0) but Bogus 35.0.0 was not found. Bogus 35.0.1 was resolved instead.",
-      "libraryId": "Bogus",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

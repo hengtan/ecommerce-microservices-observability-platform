@@ -165,3 +165,4 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Sinks.Console.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Newtonsoft.Json.dll

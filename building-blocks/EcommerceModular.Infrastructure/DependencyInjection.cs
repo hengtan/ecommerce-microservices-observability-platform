@@ -5,12 +5,12 @@ using EcommerceModular.Application.Interfaces.Repositories;
 using EcommerceModular.Infrastructure.Configurations;
 using EcommerceModular.Infrastructure.Messaging;
 using EcommerceModular.Infrastructure.Persistence;
+using EcommerceModular.Infrastructure.Projections;
 using EcommerceModular.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
-using OrderReadProjection = EcommerceModular.Infrastructure.Persistence.OrderReadProjection;
    
 namespace EcommerceModular.Infrastructure;
 
