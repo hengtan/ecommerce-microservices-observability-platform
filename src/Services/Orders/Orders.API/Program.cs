@@ -1,5 +1,7 @@
 using EcommerceModular.Application;
+using EcommerceModular.Application.Common.Metrics;
 using EcommerceModular.Infrastructure;
+using Orders.API.Monitoring;
 using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<IOrderMetrics, PrometheusOrderMetrics>();
 // Optional: Add Health Checks (if you want later)
 // builder.Services.AddHealthChecks();
 
