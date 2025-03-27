@@ -1,39 +1,62 @@
+using EcommerceModular.Application;
+using EcommerceModular.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Add application & infrastructure services
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(builder.Configuration);
+
+// Add controllers and Swagger
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Optional: Add Health Checks (if you want later)
+// builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// // Configure middleware
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI(c =>
+//     {
+//         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Orders.API v1");
+//         c.RoutePrefix = "swagger"; // Access at /swagger
+//     });
+//
+//     app.UseReDoc(c =>
+//     {
+//         c.SpecUrl = "/swagger/v1/swagger.json";
+//         c.RoutePrefix = "docs"; // Access at /docs
+//         c.DocumentTitle = "Orders.API - API Reference";
+//     });
+// }
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.MapOpenApi();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Orders.API v1");
+    c.RoutePrefix = "swagger";
+});
 
-var summaries = new[]
+app.UseReDoc(c =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    c.SpecUrl = "/swagger/v1/swagger.json";
+    c.RoutePrefix = "docs";
+});
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+// Optional: app.UseSerilogRequestLogging(); (if you use Serilog)
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+// Optional: Map health endpoints
+// app.MapHealthChecks("/health/live");
+// app.MapHealthChecks("/health/ready");
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
