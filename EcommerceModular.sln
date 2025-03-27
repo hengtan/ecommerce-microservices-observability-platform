@@ -13,6 +13,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FE8AB2BC-B6AF-48D7-8ED2-AF4B7AB8AF0F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{E596746B-60CC-432E-AF2B-C3A9B8ABD7A2}"
+	ProjectSection(SolutionItems) = preProject
+		docker\docker-compose.yml = docker\docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders.Tests", "Orders.Tests", "{335B68AD-378F-46DD-97C1-5045D8BB436A}"
 EndProject
@@ -34,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceModular.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceModular.Infrastructure", "building-blocks\EcommerceModular.Infrastructure\EcommerceModular.Infrastructure.csproj", "{AE426222-0764-4022-B347-5EAA590C5FF2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders.KafkaConsumer", "Orders.KafkaConsumer", "{F6EF7473-0168-4E86-B8FC-4AC70DF8896E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.KafkaConsumer", "src\Services\Orders\Orders.KafkaConsumer\Orders.KafkaConsumer.csproj", "{7FAB3C08-3715-4B9B-B078-0277BEB9A691}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +60,8 @@ Global
 		{AAE7E49D-B0CF-4B90-A4F2-190E8BC183E2} = {BD802ADF-571A-40B1-B5BF-1003D444B877}
 		{41EBDF77-3C9A-42E3-8D09-80925FF177F5} = {14E3E521-7EA6-4F4D-8CB6-F0D83A9C4EE1}
 		{AE426222-0764-4022-B347-5EAA590C5FF2} = {92D2314A-A5E8-43C3-87FA-F81DF52AA43D}
+		{F6EF7473-0168-4E86-B8FC-4AC70DF8896E} = {64DACFAD-C360-4C14-B55B-0F343F3F769C}
+		{7FAB3C08-3715-4B9B-B078-0277BEB9A691} = {F6EF7473-0168-4E86-B8FC-4AC70DF8896E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F1071253-AC61-42B8-99E6-98B58034BDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -71,5 +80,9 @@ Global
 		{AE426222-0764-4022-B347-5EAA590C5FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE426222-0764-4022-B347-5EAA590C5FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE426222-0764-4022-B347-5EAA590C5FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FAB3C08-3715-4B9B-B078-0277BEB9A691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FAB3C08-3715-4B9B-B078-0277BEB9A691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FAB3C08-3715-4B9B-B078-0277BEB9A691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FAB3C08-3715-4B9B-B078-0277BEB9A691}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,3 +1,5 @@
+using EcommerceModular.Application.Interfaces.Messaging;
+using EcommerceModular.Application.Interfaces.Persistence;
 using EcommerceModular.Application.Interfaces.ReadModels;
 using EcommerceModular.Infrastructure.Persistence;
 using EcommerceModular.Infrastructure.Repositories;
@@ -5,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using EcommerceModular.Application.Interfaces.Repositories;
+using EcommerceModular.Infrastructure.Messaging;
+using EcommerceModular.Infrastructure.Projections;
 using MongoDB.Driver;
 
 namespace EcommerceModular.Infrastructure;
@@ -32,6 +36,11 @@ public static class DependencyInjection
             var connectionString = configuration.GetConnectionString("Mongo");
             return new MongoClient(connectionString);
         });
+        
+        //Kafka
+        services.AddSingleton<IEventProducer, KafkaEventProducer>();
+        
+        services.AddScoped<IOrderReadProjection, OrderReadProjection>();
         
         return services;
     }
