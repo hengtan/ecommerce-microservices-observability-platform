@@ -1,4 +1,4 @@
-namespace EcommerceModular.Application.Models;
+namespace EcommerceModular.Domain.Models.ReadModels;
 
 public class ProjectedOrder
 {

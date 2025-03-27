@@ -1,5 +1,5 @@
-using EcommerceModular.Application.Models;
 using EcommerceModular.Domain.Entities;
+using EcommerceModular.Domain.Models.ReadModels;
 
 namespace EcommerceModular.Application.Interfaces.Persistence;
 

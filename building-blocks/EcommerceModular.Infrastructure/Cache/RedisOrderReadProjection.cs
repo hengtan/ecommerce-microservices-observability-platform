@@ -1,52 +1,44 @@
 using EcommerceModular.Application.Interfaces.Persistence;
-using EcommerceModular.Application.Models;
 using EcommerceModular.Domain.Entities;
+using EcommerceModular.Domain.Models.ReadModels;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 
 
 namespace EcommerceModular.Infrastructure.Cache;
-
-public class RedisOrderReadProjection(IDistributedCache cache, IOrderReadProjection inner) : IOrderReadProjection
+public class RedisOrderReadProjection(IDistributedCache cache, IOrderReadProjection fallback) : IOrderReadProjection
 {
-    // fallback: Mongo
-
-    private static readonly DistributedCacheEntryOptions CacheOptions = new()
+    public async Task<ProjectedOrder?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
-        AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30)
-    };
+        var cacheKey = $"order:{id}";
+        var cached = await cache.GetStringAsync(cacheKey, cancellationToken);
 
-    public async Task<ProjectedOrder?> GetByIdAsync(Guid orderId, CancellationToken cancellationToken = default)
-    {
-        var cached = await cache.GetStringAsync(GetKey(orderId), cancellationToken);
-        if (cached != null)
-            return JsonConvert.DeserializeObject<ProjectedOrder>(cached);
-
-        var fromDb = await inner.GetByIdAsync(orderId, cancellationToken);
-        if (fromDb != null)
+        if (!string.IsNullOrEmpty(cached))
         {
-            var serialized = JsonConvert.SerializeObject(fromDb);
-            await cache.SetStringAsync(GetKey(orderId), serialized, CacheOptions, cancellationToken);
+            return JsonConvert.DeserializeObject<ProjectedOrder>(cached);
         }
 
-        return fromDb;
-    }
+        var order = await fallback.GetByIdAsync(id, cancellationToken);
 
-    public async Task ProjectAsync(Order order, CancellationToken cancellationToken = default)
-    {
-        await inner.ProjectAsync(order, cancellationToken); // always project to Mongo
-        var projection = new ProjectedOrder
+        if (order != null)
         {
-            Id = order.Id,
-            CustomerId = order.CustomerId,
-            CreatedAt = order.CreatedAt,
-            Total = order.Total,
-            Status = order.Status.ToString()
-        };
+            var json = JsonConvert.SerializeObject(order);
+            await cache.SetStringAsync(cacheKey, json, cancellationToken);
+        }
 
-        var serialized = JsonConvert.SerializeObject(projection);
-        await cache.SetStringAsync(GetKey(order.Id), serialized, CacheOptions, cancellationToken);
+        return order;
     }
 
-    private static string GetKey(Guid orderId) => $"order:{orderId}";
+    public async Task ProjectAsync(Order order, CancellationToken cancellationToken)
+    {
+        await fallback.ProjectAsync(order, cancellationToken);
+
+        var projected = await fallback.GetByIdAsync(order.Id, cancellationToken);
+        if (projected != null)
+        {
+            var json = JsonConvert.SerializeObject(projected);
+            var cacheKey = $"order:{projected.Id}";
+            await cache.SetStringAsync(cacheKey, json, cancellationToken);
+        }
+    }
 }

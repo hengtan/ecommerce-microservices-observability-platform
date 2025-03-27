@@ -1,7 +1,7 @@
 using System.Text.Json;
 using EcommerceModular.Application.Interfaces.Persistence;
-using EcommerceModular.Application.Models;
 using EcommerceModular.Domain.Entities;
+using EcommerceModular.Domain.Models.ReadModels;
 using EcommerceModular.Infrastructure.Configurations;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
