@@ -1,28 +1,27 @@
 using System.Text.Json;
+using EcommerceModular.Application.Orders.Projections;
 using EcommerceModular.Domain.Entities;
 using Microsoft.Extensions.Caching.Distributed;
 using MongoDB.Driver;
 
 namespace EcommerceModular.Application.Interfaces.ReadModels;
 
-public class OrderReadService(IDistributedCache cache, IMongoClient mongoClient) : IOrderReadService
+public class OrderReadService(IMongoClient mongoClient, IDistributedCache cache) : IOrderReadService
 {
-    private readonly IMongoCollection<Order> _orderCollection = mongoClient
+    private readonly IMongoCollection<OrderReadModel> _orderCollection = mongoClient
         .GetDatabase("orders_read")
-        .GetCollection<Order>("orders");
+        .GetCollection<OrderReadModel>("orders");
 
-    public async Task<Order?> GetOrderByIdAsync(Guid id, CancellationToken cancellationToken)
+    public async Task<OrderReadModel?> GetOrderByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var cacheKey = $"order:{id}";
 
-        // Try Redis
         var cached = await cache.GetStringAsync(cacheKey, cancellationToken);
         if (cached is not null)
         {
-            return JsonSerializer.Deserialize<Order>(cached);
+            return JsonSerializer.Deserialize<OrderReadModel>(cached);
         }
 
-        // Fallback to MongoDB
         var order = await _orderCollection.Find(x => x.Id == id).FirstOrDefaultAsync(cancellationToken);
 
         if (order is not null)
@@ -35,5 +34,22 @@ public class OrderReadService(IDistributedCache cache, IMongoClient mongoClient)
         }
 
         return order;
+    }
+
+    private static OrderReadModel MapToReadModel(Order order)
+    {
+        return new OrderReadModel
+        {
+            Id = order.Id,
+            CustomerId = order.CustomerId,
+            CreatedAt = order.CreatedAt,
+            ShippingCity = order.ShippingAddress.City,
+            Items = order.Items.Select(i => new OrderItemReadModel
+            {
+                ProductId = i.ProductId,
+                ProductName = i.ProductName,
+                Quantity = i.Quantity
+            }).ToList()
+        };
     }
 }

@@ -1,8 +1,8 @@
-using EcommerceModular.Domain.Entities;
+using EcommerceModular.Application.Orders.Projections;
 
 namespace EcommerceModular.Application.Interfaces.ReadModels;
 
 public interface IOrderReadService
 {
-    Task<Order?> GetOrderByIdAsync(Guid id, CancellationToken cancellationToken);
+    Task<OrderReadModel?> GetOrderByIdAsync(Guid id, CancellationToken cancellationToken);
 }
