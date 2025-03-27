@@ -155,3 +155,13 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Prometheus.NetStandard.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Prometheus.AspNetCore.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Serilog.Sinks.File.dll

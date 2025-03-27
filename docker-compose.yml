@@ -25,6 +25,16 @@ services:
     networks:
       - ecommerce-net
 
+  kafka-exporter:
+    image: danielqsj/kafka-exporter:latest
+    container_name: kafka-exporter
+    ports:
+      - "9308:9308"
+    environment:
+      - KAFKA_URI=kafka:9092
+    depends_on:
+      - kafka
+      
   mongo:
     image: mongo:7.0
     ports:
