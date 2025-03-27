@@ -56,7 +56,23 @@ services:
       - "9090:9090"
     volumes:
       - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-      
+    networks:
+      - ecommerce-net
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - ecommerce-net
+
   orders.api:
     build:
       context: .
@@ -84,6 +100,9 @@ services:
       - DOTNET_ENVIRONMENT=Development
     networks:
       - ecommerce-net
+
+volumes:
+  grafana-data:
 
 networks:
   ecommerce-net:
