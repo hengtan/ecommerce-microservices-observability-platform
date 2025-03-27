@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orders.Consumer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9881180fc0149f52a323b9e181fb6f3487bab723")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6242206cf711b4860286cf51328c250cac017123")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orders.Consumer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orders.Consumer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

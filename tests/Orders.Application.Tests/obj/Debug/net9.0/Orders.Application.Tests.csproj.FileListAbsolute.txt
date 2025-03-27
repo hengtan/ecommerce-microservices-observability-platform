@@ -122,3 +122,17 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.pdb
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.genruntimeconfig.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/obj/Debug/net9.0/ref/Orders.Application.Tests.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Http.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Http.Polly.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Polly.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Polly.Core.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/bin/Debug/net9.0/Polly.Extensions.Http.dll
