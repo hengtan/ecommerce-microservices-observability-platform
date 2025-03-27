@@ -2,37 +2,42 @@ name: CI Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build:
+  build-test:
     runs-on: ubuntu-latest
+    name: Build & Test
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '6.0'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
+      - name: Restore dependencies
+        run: dotnet restore
 
-    - name: Run tests
-      run: dotnet test --collect:"XPlat Code Coverage"
+      - name: Build
+        run: dotnet build --no-restore --configuration Debug
 
-    - name: Generate Code Coverage Report
-      run: |
-        dotnet tool install --global coverlet.console
-        coverlet ./bin/Debug/net6.0/ProjetoPagamentosAspNetCore.dll --target "dotnet" --targetargs "test" --output "coverage.json"
+      - name: Test with coverage
+        run: dotnet test --no-build --configuration Debug --collect:"XPlat Code Coverage"
 
-    - name: Upload coverage results
-      uses: codecov/codecov-action@v2
-      with:
-        file: coverage.json
+      - name: Generate coverage report
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.1.25
+        with:
+          reports: '**/coverage.cobertura.xml'
+          targetdir: 'coveragereport'
+          reporttypes: 'HtmlInline_AzurePipelines'
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coveragereport
