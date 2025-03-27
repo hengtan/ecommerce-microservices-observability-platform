@@ -7,5 +7,6 @@ public class CreateOrderCommand : IRequest<Guid>
 {
     public string CustomerId { get; set; } = string.Empty;
     public AddressDto ShippingAddress { get; set; } = null!;
-    public List<OrderItemDto> Items { get; set; } = new();
+    public List<OrderItemDto> Items { get; set; } = [];
+    public string CustomerType { get; set; } = "Normal"; // NEW: used for strategy selection
 }

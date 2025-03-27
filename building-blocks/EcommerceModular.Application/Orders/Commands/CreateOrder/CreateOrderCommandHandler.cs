@@ -1,13 +1,15 @@
 using EcommerceModular.Application.Interfaces.Repositories;
+using EcommerceModular.Application.Strategies.OrderTotal;
 using EcommerceModular.Domain.Entities;
 using MediatR;
 
 namespace EcommerceModular.Application.Orders.Commands.CreateOrder;
 
-public class CreateOrderCommandHandler(IOrderRepository orderRepository) : IRequestHandler<CreateOrderCommand, Guid>
+public class CreateOrderCommandHandler(
+    IOrderRepository orderRepository,
+    OrderTotalStrategySelector strategySelector)
+    : IRequestHandler<CreateOrderCommand, Guid>
 {
-    private readonly IOrderRepository _orderRepository = orderRepository;
-
     public async Task<Guid> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         var address = new Address(
@@ -23,7 +25,13 @@ public class CreateOrderCommandHandler(IOrderRepository orderRepository) : IRequ
 
         var order = new Order(request.CustomerId, address, items);
 
-        await _orderRepository.AddAsync(order);
+        // Use the Strategy Pattern to calculate the total
+        var strategy = strategySelector.SelectStrategy(request.CustomerType);
+        var total = strategy.CalculateTotal(order);
+
+        Console.WriteLine($"[OrderTotal] CustomerType: {request.CustomerType}, Calculated Total: {total:C}");
+
+        await orderRepository.AddAsync(order);
 
         return order.Id;
     }
