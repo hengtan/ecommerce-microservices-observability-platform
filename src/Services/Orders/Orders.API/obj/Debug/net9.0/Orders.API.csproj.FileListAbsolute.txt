@@ -152,3 +152,4 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.genruntimeconfig.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll

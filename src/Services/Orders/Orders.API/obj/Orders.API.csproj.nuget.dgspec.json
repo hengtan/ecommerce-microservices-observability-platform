@@ -205,6 +205,10 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.2.1, )"
@@ -265,12 +269,6 @@
               },
               "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj": {
                 "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj"
-              },
-              "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj": {
-                "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj"
-              },
-              "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj": {
-                "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj"
               }
             }
           }

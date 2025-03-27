@@ -316,10 +316,10 @@
           }
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/9.0.1": {
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.1"
+          "Microsoft.Extensions.Primitives": "9.0.3"
         },
         "compile": {
           "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
@@ -333,6 +333,25 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/9.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.3"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Extensions.Configuration.Binder.targets": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/9.0.3": {
@@ -831,6 +850,7 @@
           "EcommerceModular.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "9.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.3",
           "MongoDB.Driver": "3.2.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "StackExchange.Redis": "2.8.31"
@@ -1352,10 +1372,10 @@
         "microsoft.extensions.caching.stackexchangeredis.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/9.0.1": {
-      "sha512": "+4hfFIY1UjBCXFTTOd+ojlDPq6mep3h5Vq5SYE3Pjucr7dNXmq4S/6P/LoVnZFz2e/5gWp/om4svUFgznfULcA==",
+    "Microsoft.Extensions.Configuration.Abstractions/9.0.3": {
+      "sha512": "q5qlbm6GRUrle2ZZxy9aqS/wWoc+mRD3JeP6rcpiJTh5XcemYkplAcJKq8lU11ZfPom5lfbZZfnQvDqcUhqD5Q==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/9.0.1",
+      "path": "microsoft.extensions.configuration.abstractions/9.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1375,8 +1395,47 @@
         "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.9.0.3.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Binder/9.0.3": {
+      "sha512": "ad82pYBUSQbd3WIboxsS1HzFdRuHKRa2CpYwie/o6dZAxUjt62yFwjoVdM7Iw2VO5fHV1rJwa7jJZBNZin0E7Q==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.binder/9.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/Microsoft.Extensions.Configuration.Binder.SourceGeneration.dll",
+        "analyzers/dotnet/cs/cs/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/de/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/es/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/fr/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/it/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/ja/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/ko/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/pl/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/ru/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/tr/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/zh-Hans/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "analyzers/dotnet/cs/zh-Hant/Microsoft.Extensions.Configuration.Binder.SourceGeneration.resources.dll",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Configuration.Binder.targets",
+        "lib/net462/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/net462/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/net8.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/net8.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/net9.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/net9.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.9.0.3.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -2184,8 +2243,6 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj",
-      "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj",
       "EcommerceModular.Application >= 1.0.0",
       "EcommerceModular.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.0",
@@ -2223,12 +2280,6 @@
             },
             "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj": {
               "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj"
-            },
-            "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj": {
-              "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj"
-            },
-            "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj": {
-              "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj"
             }
           }
         }
@@ -2284,25 +2335,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project '/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project '/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

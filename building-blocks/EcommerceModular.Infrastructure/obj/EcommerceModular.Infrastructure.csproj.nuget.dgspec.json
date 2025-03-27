@@ -205,6 +205,10 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.2.1, )"

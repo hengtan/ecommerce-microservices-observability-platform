@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bzEvUySt3pw=",
+  "dgSpecHash": "EFgsEKqJUmI=",
   "success": true,
   "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.memory/9.0.3/microsoft.extensions.caching.memory.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/9.0.2/microsoft.extensions.caching.stackexchangeredis.9.0.2.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.3/microsoft.extensions.configuration.abstractions.9.0.3.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.extensions.configuration.binder/9.0.3/microsoft.extensions.configuration.binder.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.3/microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.3/microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencymodel/9.0.3/microsoft.extensions.dependencymodel.9.0.3.nupkg.sha512",

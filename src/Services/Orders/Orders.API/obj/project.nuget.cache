@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "22NMaz5nsDw=",
-  "success": false,
+  "dgSpecHash": "4tHKxwYIGeo=",
+  "success": true,
   "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/Orders.API.csproj",
   "expectedPackageFiles": [
     "/Users/hengtan/.nuget/packages/confluent.kafka/2.8.0/confluent.kafka.2.8.0.nupkg.sha512",
@@ -18,7 +18,8 @@
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.3/microsoft.extensions.caching.abstractions.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.memory/9.0.3/microsoft.extensions.caching.memory.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/9.0.2/microsoft.extensions.caching.stackexchangeredis.9.0.2.nupkg.sha512",
-    "/Users/hengtan/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.1/microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.3/microsoft.extensions.configuration.abstractions.9.0.3.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.extensions.configuration.binder/9.0.3/microsoft.extensions.configuration.binder.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.3/microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.3/microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.logging/9.0.3/microsoft.extensions.logging.9.0.3.nupkg.sha512",
@@ -49,24 +50,5 @@
     "/Users/hengtan/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project '/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project '/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

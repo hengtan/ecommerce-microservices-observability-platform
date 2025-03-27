@@ -15,8 +15,6 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\..\building-blocks\EcommerceModular.Application\EcommerceModular.Application.csproj" />
       <ProjectReference Include="..\..\..\..\building-blocks\EcommerceModular.Infrastructure\EcommerceModular.Infrastructure.csproj" />
-      <ProjectReference Include="..\EcommerceModular.Application\EcommerceModular.Application.csproj" />
-      <ProjectReference Include="..\EcommerceModular.Infrastructure\EcommerceModular.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
