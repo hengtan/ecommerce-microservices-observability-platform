@@ -1,13 +1,71 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Rider ignored files
-/contentModel.xml
-/.idea.ecommerce-modular.iml
-/projectSettingsUpdater.xml
-/modules.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+## Ignore build results
+bin/
+obj/
+out/
+Generated/
+
+## Rider & VS Code settings
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## ASP.NET Core
+wwwroot/dist/
+wwwroot/node_modules/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Logs
+*.log
+
+## OS-specific files
+.DS_Store
+Thumbs.db
+
+## Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testlog
+
+## dotnet tools
+.dotnet-tools.json
+
+## Docker / Compose
+.env
+docker-compose.override.yml
+
+## Ignore secrets
+secrets.json
+appsettings.*.local.json
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## GitHub Actions artifacts
+*.code-coverage.xml
+coverage.opencover.xml
+coverage.cobertura.xml
+coverage.json
+
+## Others
+*.orig
+*.rej
