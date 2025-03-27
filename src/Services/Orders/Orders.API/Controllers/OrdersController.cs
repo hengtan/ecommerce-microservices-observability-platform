@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using EcommerceModular.Application.Orders.Commands.CreateOrder;
+using EcommerceModular.Application.Orders.Queries.GetOrderById;
 
 namespace Orders.API.Controllers;
 
@@ -14,10 +15,15 @@ public class OrdersController(IMediator mediator) : ControllerBase
         var orderId = await mediator.Send(command);
         return CreatedAtAction(nameof(GetById), new { id = orderId }, orderId);
     }
-
-    [HttpGet("{id}")]
-    public IActionResult GetById(Guid id)
+    
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> GetById(Guid id)
     {
-        return Ok(new { message = $"(Mock) Returning order with ID {id}" });
+        var result = await mediator.Send(new GetOrderByIdQuery(id));
+
+        if (result is null)
+            return NotFound();
+
+        return Ok(result);
     }
 }
