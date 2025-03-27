@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "mCwlwUZPFg8=",
+  "success": true,
+  "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Application/EcommerceModular.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/hengtan/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
