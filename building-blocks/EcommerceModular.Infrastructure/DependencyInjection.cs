@@ -1,14 +1,14 @@
 using EcommerceModular.Application.Interfaces.Messaging;
 using EcommerceModular.Application.Interfaces.Persistence;
 using EcommerceModular.Application.Interfaces.ReadModels;
+using EcommerceModular.Application.Interfaces.Repositories;
+using EcommerceModular.Infrastructure.Messaging;
 using EcommerceModular.Infrastructure.Persistence;
+using EcommerceModular.Infrastructure.Projections;
 using EcommerceModular.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using EcommerceModular.Application.Interfaces.Repositories;
-using EcommerceModular.Infrastructure.Messaging;
-using EcommerceModular.Infrastructure.Projections;
 using MongoDB.Driver;
 
 namespace EcommerceModular.Infrastructure;

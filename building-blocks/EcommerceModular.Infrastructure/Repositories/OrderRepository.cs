@@ -1,6 +1,6 @@
-using EcommerceModular.Infrastructure.Persistence;
 using EcommerceModular.Application.Interfaces.Repositories;
 using EcommerceModular.Domain.Entities;
+using EcommerceModular.Infrastructure.Persistence;
 
 namespace EcommerceModular.Infrastructure.Repositories;
 

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RgLu8TqEYNw=",
-  "success": true,
+  "dgSpecHash": "22NMaz5nsDw=",
+  "success": false,
   "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/Orders.API.csproj",
   "expectedPackageFiles": [
+    "/Users/hengtan/.nuget/packages/confluent.kafka/2.8.0/confluent.kafka.2.8.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/librdkafka.redist/2.8.0/librdkafka.redist.2.8.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
@@ -14,6 +17,7 @@
     "/Users/hengtan/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.3/microsoft.extensions.caching.abstractions.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.memory/9.0.3/microsoft.extensions.caching.memory.9.0.3.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/9.0.2/microsoft.extensions.caching.stackexchangeredis.9.0.2.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.1/microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.3/microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.3/microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
@@ -21,14 +25,48 @@
     "/Users/hengtan/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.3/microsoft.extensions.logging.abstractions.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.options/9.0.3/microsoft.extensions.options.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.extensions.primitives/9.0.3/microsoft.extensions.primitives.9.0.3.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.openapi/1.6.23/microsoft.openapi.1.6.23.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/mongodb.bson/3.2.1/mongodb.bson.3.2.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/mongodb.driver/3.2.1/mongodb.driver.3.2.1.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/npgsql.entityframeworkcore.postgresql/9.0.4/npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/redoc.aspnetcore/1.0.0/redoc.aspnetcore.1.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/snappier/1.0.0/snappier.1.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/stackexchange.redis/2.8.31/stackexchange.redis.2.8.31.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/swashbuckle.aspnetcore/8.0.0/swashbuckle.aspnetcore.8.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/swashbuckle.aspnetcore.swagger/8.0.0/swashbuckle.aspnetcore.swagger.8.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/swashbuckle.aspnetcore.swaggergen/8.0.0/swashbuckle.aspnetcore.swaggergen.8.0.0.nupkg.sha512",
-    "/Users/hengtan/.nuget/packages/swashbuckle.aspnetcore.swaggerui/8.0.0/swashbuckle.aspnetcore.swaggerui.8.0.0.nupkg.sha512"
+    "/Users/hengtan/.nuget/packages/swashbuckle.aspnetcore.swaggerui/8.0.0/swashbuckle.aspnetcore.swaggerui.8.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project '/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Application/EcommerceModular.Application.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project '/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/EcommerceModular.Infrastructure/EcommerceModular.Infrastructure.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

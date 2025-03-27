@@ -1,7 +1,7 @@
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using EcommerceModular.Application.Orders.Commands.CreateOrder;
 using EcommerceModular.Application.Orders.Queries.GetOrderById;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Orders.API.Controllers;
 

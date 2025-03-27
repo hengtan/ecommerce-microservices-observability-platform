@@ -8,9 +8,10 @@ public class OrderTotalStrategySelector(IServiceProvider serviceProvider)
     {
         return customerType switch
         {
-            "Premium" => serviceProvider.GetRequiredService<PremiumStrategy>(),
-            "Discount" => serviceProvider.GetRequiredService<DiscountStrategy>(),
-            _ => serviceProvider.GetRequiredService<NormalStrategy>()
+            "Normal" => (IOrderTotalStrategy) serviceProvider.GetRequiredService<NormalStrategy>(),
+            "Discount" => (IOrderTotalStrategy) serviceProvider.GetRequiredService<DiscountStrategy>(),
+            "Premium" => (IOrderTotalStrategy) serviceProvider.GetRequiredService<PremiumStrategy>(),
+            _ => throw new ArgumentException($"Invalid customer type: {customerType}")
         };
     }
 }
