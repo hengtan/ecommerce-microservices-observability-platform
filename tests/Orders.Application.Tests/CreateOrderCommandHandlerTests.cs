@@ -1,4 +1,5 @@
 ﻿using Bogus;
+using EcommerceModular.Application.Common.Metrics;
 using EcommerceModular.Application.Interfaces.Messaging;
 using EcommerceModular.Application.Interfaces.Persistence;
 using EcommerceModular.Application.Interfaces.Repositories;
@@ -18,13 +19,14 @@ public class CreateOrderCommandHandlerTests
     private OrderTotalStrategySelector _strategySelector;
     private IEventProducer _eventProducer;
     private IOrderReadProjection _projection;
-
+    private IOrderMetrics _orderMetrics; // novo campo
+    
     [SetUp]
     public void Setup()
     {
         var serviceProvider = Substitute.For<IServiceProvider>();
 
-        // Register the real NormalStrategy — this avoids cast issues
+        // Register the real NormalStrategy
         serviceProvider
             .GetService(typeof(NormalStrategy))
             .Returns(new NormalStrategy());
@@ -34,11 +36,14 @@ public class CreateOrderCommandHandlerTests
         _projection = Substitute.For<IOrderReadProjection>();
         _strategySelector = new OrderTotalStrategySelector(serviceProvider);
 
+        _orderMetrics = Substitute.For<IOrderMetrics>(); // mock da nova dependência
+
         _handler = new CreateOrderCommandHandler(
             _orderRepo,
             _strategySelector,
             _eventProducer,
-            _projection
+            _projection,
+            _orderMetrics // novo parâmetro aqui
         );
     }
 
@@ -141,5 +146,40 @@ public class CreateOrderCommandHandlerTests
         await _orderRepo.Received(1).AddAsync(Arg.Any<Order>());
         await _eventProducer.Received(1).ProduceAsync("orders.created", Arg.Any<object>());
         await _projection.Received(1).ProjectAsync(Arg.Any<Order>());
+    }
+    
+    [Test]
+    public async Task Handle_Should_Track_Metrics_Correctly()
+    {
+        // Arrange
+        var command = new CreateOrderCommand
+        {
+            CustomerId = Guid.NewGuid().ToString(),
+            CustomerType = "Normal",
+            ShippingAddress = new()
+            {
+                Street = "Rua 1",
+                City = "Cidade",
+                State = "Estado",
+                Country = "País",
+                ZipCode = "00000-000"
+            },
+            Items = new()
+            {
+                new() { ProductId = Guid.NewGuid(), ProductName = "Produto", Quantity = 1, UnitPrice = 10.0m }
+            }
+        };
+
+        // Mock o timer retornado por MeasureOrderProcessingDuration
+        var fakeTimer = Substitute.For<IDisposable>();
+        _orderMetrics.MeasureOrderProcessingDuration().Returns(fakeTimer);
+
+        // Act
+        await _handler.Handle(command, CancellationToken.None);
+
+        // Assert - verificar se as métricas foram chamadas
+        _orderMetrics.Received(1).IncrementOrdersCreated();
+        _orderMetrics.Received(1).MeasureOrderProcessingDuration();
+        fakeTimer.Received(1).Dispose(); // garante que o timer foi finalizado
     }
 }
