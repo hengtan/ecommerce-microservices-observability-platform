@@ -1,5 +1,6 @@
 using EcommerceModular.Application;
 using EcommerceModular.Infrastructure;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,11 @@ var app = builder.Build();
 //         c.DocumentTitle = "Orders.API - API Reference";
 //     });
 // }
+
+app.UseHttpMetrics(); // track HTTP requests
+
+app.MapMetrics(); // 👈 ESSENCIAL! /metrics endpoint
+
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
