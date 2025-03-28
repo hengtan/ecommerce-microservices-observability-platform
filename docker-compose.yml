@@ -86,7 +86,7 @@ services:
   orders.api:
     build:
       context: .
-      dockerfile: services/Orders.API/Dockerfile
+      dockerfile: src/services/Orders/Orders.API/Dockerfile
     ports:
       - "5000:80"
     depends_on:
@@ -102,7 +102,7 @@ services:
   orders.consumer:
     build:
       context: .
-      dockerfile: services/Orders.Consumer/Dockerfile
+      dockerfile: src/services/Orders/Orders.Consumer/Dockerfile
     depends_on:
       - kafka
       - mongo
