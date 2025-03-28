@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/Orders.API.csproj": {}
+    "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.API/Orders.API.csproj": {}
   },
   "projects": {
     "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Application/EcommerceModular.Application.csproj": {
@@ -254,14 +254,14 @@
         }
       }
     },
-    "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/Orders.API.csproj": {
+    "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.API/Orders.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/Orders.API.csproj",
+        "projectUniqueName": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.API/Orders.API.csproj",
         "projectName": "Orders.API",
-        "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/Orders.API.csproj",
+        "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.API/Orders.API.csproj",
         "packagesPath": "/Users/hengtan/.nuget/packages/",
-        "outputPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/obj/",
+        "outputPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/hengtan/.nuget/NuGet/NuGet.Config"

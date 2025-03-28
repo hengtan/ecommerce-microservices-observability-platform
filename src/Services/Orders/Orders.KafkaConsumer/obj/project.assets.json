@@ -2258,11 +2258,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj",
+      "projectUniqueName": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj",
       "projectName": "Orders.KafkaConsumer",
-      "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj",
+      "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj",
       "packagesPath": "/Users/hengtan/.nuget/packages/",
-      "outputPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/obj/",
+      "outputPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hengtan/.nuget/NuGet/NuGet.Config"

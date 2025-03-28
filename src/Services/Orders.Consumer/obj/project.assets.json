@@ -3050,11 +3050,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders.Consumer/Orders.Consumer.csproj",
+      "projectUniqueName": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders.Consumer/Orders.Consumer.csproj",
       "projectName": "Orders.Consumer",
-      "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders.Consumer/Orders.Consumer.csproj",
+      "projectPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders.Consumer/Orders.Consumer.csproj",
       "packagesPath": "/Users/hengtan/.nuget/packages/",
-      "outputPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders.Consumer/obj/",
+      "outputPath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders.Consumer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hengtan/.nuget/NuGet/NuGet.Config"
