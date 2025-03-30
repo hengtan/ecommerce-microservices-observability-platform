@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "xY3NypewKtM=",
   "success": true,
-  "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj",
+  "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj",
   "expectedPackageFiles": [
     "/Users/hengtan/.nuget/packages/confluent.kafka/2.8.0/confluent.kafka.2.8.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
