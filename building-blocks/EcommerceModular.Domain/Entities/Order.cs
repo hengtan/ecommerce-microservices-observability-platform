@@ -10,7 +10,10 @@ public class Order
     public OrderStatus Status { get; private set; }
 
     public decimal Total => Items.Sum(item => item.Total);
-
+    
+// 👇 Construtor vazio obrigatório para o EF Core
+    private Order() { }
+    
     public Order(string customerId, Address shippingAddress, List<OrderItem> items)
     {
         Id = Guid.NewGuid();

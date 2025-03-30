@@ -1,8 +1,16 @@
 using EcommerceModular.Application;
 using EcommerceModular.Application.Common.Metrics;
+using EcommerceModular.Application.Interfaces.Messaging;
+using EcommerceModular.Application.Interfaces.ReadModels;
 using EcommerceModular.Infrastructure;
+using EcommerceModular.Infrastructure.Messaging;
+using EcommerceModular.Infrastructure.Persistence;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.EntityFrameworkCore;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using Orders.API.Monitoring;
 using Prometheus;
@@ -11,7 +19,7 @@ using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔥 Configure Serilog
+// ✅ Serilog
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
     .MinimumLevel.Debug()
@@ -22,14 +30,36 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-// Register services
+// ✅ Application e Infrastructure
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+
+// ✅ MongoDB Client
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var connectionString = builder.Configuration["MongoSettings:ConnectionString"];
+    return new MongoClient(connectionString);
+});
+
+// ✅ Registra o serializador de GUID
+if (!BsonClassMap.IsClassMapRegistered(typeof(Guid)))
+{
+    BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+}
+
+// ✅ Leitura de pedidos e Kafka producer
+builder.Services.AddScoped<IOrderReadService, OrderReadService>();
+builder.Services.AddScoped<IEventProducer, KafkaEventProducer>();
+
+// ✅ Métricas com Prometheus
 builder.Services.AddSingleton<IOrderMetrics, PrometheusOrderMetrics>();
 
-// Controllers + Swagger
+// ✅ Controllers + Swagger + ReDoc
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c => c.EnableAnnotations());
 
+// ✅ Health Checks
 builder.Services.AddHealthChecks()
     .AddNpgSql(
         builder.Configuration.GetConnectionString("DefaultConnection")!,
@@ -50,56 +80,50 @@ builder.Services.AddHealthChecks()
         tags: ["cache", "redis"]
     );
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.EnableAnnotations();
-});
-
-// (Optional) Health Checks
-builder.Services.AddHealthChecks();
-
 var app = builder.Build();
 
-// Middleware: Metrics
-app.UseHttpMetrics();           // Track HTTP requests
-app.MapMetrics();               // /metrics endpoint
+// ✅ Aplica migrations automaticamente
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+    dbContext.Database.Migrate();
+}
 
-// Swagger UI
+// ✅ Prometheus
+app.UseHttpMetrics();
+app.MapMetrics(); // /metrics
+
+// ✅ Swagger + ReDoc
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Orders.API v1");
-    c.RoutePrefix = "swagger"; // /swagger
+    c.RoutePrefix = "swagger";
 });
-
-// ReDoc UI
 app.UseReDoc(c =>
 {
     c.SpecUrl = "/swagger/v1/swagger.json";
-    c.RoutePrefix = "docs"; // /docs
+    c.RoutePrefix = "docs";
     c.DocumentTitle = "Orders.API - API Reference";
 });
 
-// Middleware pipeline
+// ✅ Middlewares
 app.UseHttpsRedirection();
 app.UseAuthorization();
-app.UseSerilogRequestLogging(); // Log HTTP requests
+app.UseSerilogRequestLogging();
 app.MapControllers();
 
-// Health endpoints (optional)
+// ✅ Health endpoints
 app.MapHealthChecks("/health/live", new HealthCheckOptions
 {
     Predicate = _ => true,
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-
 app.MapHealthChecks("/health/ready", new HealthCheckOptions
 {
     Predicate = r => r.Tags.Contains("ready"),
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-
 app.MapHealthChecks("/health", new HealthCheckOptions
 {
     Predicate = _ => true,

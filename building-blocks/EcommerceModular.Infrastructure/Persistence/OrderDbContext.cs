@@ -9,7 +9,17 @@ public class OrderDbContext(DbContextOptions<OrderDbContext> options) : DbContex
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(OrderDbContext).Assembly);
-        base.OnModelCreating(modelBuilder);
+        // modelBuilder.ApplyConfigurationsFromAssembly(typeof(OrderDbContext).Assembly);
+        // base.OnModelCreating(modelBuilder);
+        
+        modelBuilder.Entity<Order>(order =>
+        {
+            order.OwnsOne(o => o.ShippingAddress); // Owned type
+            order.HasMany(o => o.Items)
+                .WithOne()
+                .HasForeignKey("OrderId"); // Ou use shadow property
+        });
+
+        modelBuilder.Entity<OrderItem>().HasKey(x => x.Id); // Adiciona a PK
     }
 }

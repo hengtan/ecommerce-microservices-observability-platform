@@ -102,9 +102,6 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders.Consumer/bin/Debug/net9.0/Polly.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders.Consumer/bin/Debug/net9.0/Polly.Core.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders.Consumer/bin/Debug/net9.0/Polly.Extensions.Http.dll
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/refint/Orders.Consumer.dll
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer
@@ -193,5 +190,8 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.CoreCompileInputs.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.C.67341D2E.Up2Date
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/refint/Orders.Consumer.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.genruntimeconfig.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/ref/Orders.Consumer.dll

@@ -18,7 +18,7 @@ public static class DependencyInjection
     {
         // PostgreSQL setup
         services.AddDbContext<OrderDbContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("PostgreSql")));
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
         // Redis setup
         services.AddStackExchangeRedisCache(options =>

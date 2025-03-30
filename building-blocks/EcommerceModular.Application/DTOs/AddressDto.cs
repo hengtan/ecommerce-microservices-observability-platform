@@ -7,4 +7,5 @@ public class AddressDto
     public string State { get; set; } = string.Empty;
     public string Country { get; set; } = string.Empty;
     public string ZipCode { get; set; } = string.Empty;
+    
 }
