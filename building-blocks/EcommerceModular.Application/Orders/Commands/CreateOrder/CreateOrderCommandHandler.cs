@@ -37,7 +37,7 @@ public class CreateOrderCommandHandler(
         return order.Id;
     }
 
-    private Order BuildOrderFromRequest(CreateOrderCommand request)
+    private static Order BuildOrderFromRequest(CreateOrderCommand request)
     {
         var address = new Address(
             request.ShippingAddress.Street,

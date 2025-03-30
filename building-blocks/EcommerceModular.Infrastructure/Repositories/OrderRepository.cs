@@ -4,18 +4,11 @@ using EcommerceModular.Infrastructure.Persistence;
 
 namespace EcommerceModular.Infrastructure.Repositories;
 
-public class OrderRepository : IOrderRepository
+public class OrderRepository(OrderDbContext context) : IOrderRepository
 {
-    private readonly OrderDbContext _context;
-
-    public OrderRepository(OrderDbContext context)
-    {
-        _context = context;
-    }
-
     public async Task AddAsync(Order order)
     {
-        await _context.Orders.AddAsync(order);
-        await _context.SaveChangesAsync();
+        await context.Orders.AddAsync(order);
+        await context.SaveChangesAsync();
     }
 }
