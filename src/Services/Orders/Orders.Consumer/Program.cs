@@ -1,3 +1,5 @@
+using Confluent.Kafka;
+using Confluent.Kafka.Admin;
 using EcommerceModular.Application.Interfaces.Messaging;
 using EcommerceModular.Application.Interfaces.Persistence;
 using EcommerceModular.Infrastructure.Cache;
@@ -41,15 +43,11 @@ builder.Services.AddScoped<IOrderReadProjection>(sp =>
         sp.GetRequiredService<OrderReadProjection>())
 );
 
-
-
 // Redis configuration
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration["Redis"];
 });
-
-
 
 // Main projection (Mongo)
 builder.Services.AddScoped<OrderReadProjection>();
@@ -63,6 +61,31 @@ builder.Services.AddScoped<IOrderReadProjection>(sp =>
 
 // Kafka consumer
 builder.Services.AddScoped<IKafkaOrderCreatedConsumer, KafkaOrderCreatedConsumer>();
+
+var adminConfig = new AdminClientConfig
+{
+    BootstrapServers = "localhost:9092"
+};
+
+using var adminClient = new AdminClientBuilder(adminConfig).Build();
+
+try
+{
+    await adminClient.CreateTopicsAsync(new TopicSpecification[]
+    {
+        new TopicSpecification
+        {
+            Name = "orders.created",
+            NumPartitions = 1,
+            ReplicationFactor = 1
+        }
+    });
+}
+catch (CreateTopicsException ex)
+{
+    if (ex.Results.Any(r => r.Error.Code != ErrorCode.TopicAlreadyExists))
+        throw;
+}
 
 // Worker
 builder.Services.AddHostedService<Worker>();
