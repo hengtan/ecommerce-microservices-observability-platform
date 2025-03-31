@@ -13,7 +13,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="˚ç">
+    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis">
+      <change afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/Messaging/IKafkaOrderCreatedConsumer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/logs/orders-api20250330.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/logs/orders-api20250331.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Dtos/AddressDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Dtos/OrderDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Dtos/OrderItemDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.AspNetCore.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Extensions.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Formatting.Compact.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Settings.Configuration.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Sinks.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Sinks.Debug.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.Sinks.File.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Serilog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcommerceModular.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceModular.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/Persistence/IOrderReadProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/Persistence/IOrderReadProjection.cs" afterDir="false" />
@@ -88,24 +105,25 @@
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Archive.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Orders.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Orders.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/HealthChecks.MongoDb.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/HealthChecks.MongoDb.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Bson.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Bson.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Driver.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Driver.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/ZstdSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/ZstdSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -116,7 +134,6 @@
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/refint/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/refint/Orders.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.packagespec.json" afterDir="false" />
@@ -149,14 +166,11 @@
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Bson.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Bson.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Driver.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Driver.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.runtimeconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/ZstdSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/ZstdSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll" afterDir="false" />
@@ -227,6 +241,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e8bc77d296dbfa0f7a2456d5ae46ce4fe6113f975e32755c54f64bd5a39c/BackgroundService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.KafkaConsumer/KafkaConsumerWorker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.KafkaConsumer/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -432,7 +447,7 @@
       <workItem from="1743191057143" duration="383000" />
       <workItem from="1743191515485" duration="6624000" />
       <workItem from="1743273658874" duration="31417000" />
-      <workItem from="1743388684687" duration="8138000" />
+      <workItem from="1743388684687" duration="8471000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update API configuration and add PostgreSQL connection strings&#10;changing to building-blocks session">
       <option name="closed" value="true" />
@@ -666,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743364716415</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis">
+      <option name="closed" value="true" />
+      <created>1743397165730</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1743397165730</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +719,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: expand .gitignore to include build results, user-specific files, and various environment settings" />
     <MESSAGE value="feat: integrate Kafka for order event publishing and add related configurations" />
     <MESSAGE value="feat: add Dockerfile for building and running Orders.API service" />
     <MESSAGE value="feat: add Kafka configuration and dependencies for event handling" />
@@ -721,7 +743,8 @@
     <MESSAGE value="feat: update assembly informational version and standardize project directory paths for consistency" />
     <MESSAGE value="feat: refactor OrderRepository constructor and update assembly informational version for consistency" />
     <MESSAGE value="feat: update assembly informational version and sourcelink for consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update assembly informational version and sourcelink for consistency" />
+    <MESSAGE value="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
