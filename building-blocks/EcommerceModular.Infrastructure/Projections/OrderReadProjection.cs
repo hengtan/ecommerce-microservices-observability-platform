@@ -1,51 +1,74 @@
-using System.Text.Json;
-using EcommerceModular.Application.Interfaces.Persistence;
+using EcommerceModular.Application.DTOs;
 using EcommerceModular.Domain.Entities;
-using EcommerceModular.Domain.Models.ReadModels;
+using EcommerceModular.Application.Orders.Projections;
 using EcommerceModular.Infrastructure.Configurations;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using IOrderReadProjection = EcommerceModular.Application.Interfaces.Persistence.IOrderReadProjection;
 
 namespace EcommerceModular.Infrastructure.Projections;
 
 public class OrderReadProjection : IOrderReadProjection
 {
-    private readonly IMongoCollection<ProjectedOrder> _collection;
+    private readonly IMongoCollection<OrderReadModel> _collection;
 
     public OrderReadProjection(IOptions<MongoSettings> mongoSettings)
     {
-        var client = new MongoClient(mongoSettings.Value.ConnectionString);
-        var database = client.GetDatabase(mongoSettings.Value.DatabaseName);
-        _collection = database.GetCollection<ProjectedOrder>("orders_read");
+        var settings = mongoSettings.Value;
+        Console.WriteLine($"[MongoSettings] ConnectionString: {settings.ConnectionString}");
+        Console.WriteLine($"[MongoSettings] DatabaseName: {settings.Database}");
+        Console.WriteLine($"[MongoSettings] Collection: {settings.Collection}");
+
+        var client = new MongoClient(settings.ConnectionString);
+        var database = client.GetDatabase(settings.Database);
+        _collection = database.GetCollection<OrderReadModel>(settings.Collection);
     }
 
-    public async Task ProjectAsync(Order order, CancellationToken cancellationToken)
+    public async Task ProjectAsync(Order order, CancellationToken cancellationToken = default)
     {
-        var projected = new ProjectedOrder
+        try
         {
-            Id = order.Id,
-            CustomerId = order.CustomerId,
-            CreatedAt = order.CreatedAt,
-            Items = order.Items.Select(i => new ProjectedOrderItem
-            {
-                ProductId = i.ProductId,
-                ProductName = i.ProductName,
-                Quantity = i.Quantity,
-                UnitPrice = i.UnitPrice
-            }).ToList()
-        };
+            Console.WriteLine($"[Mongo] Inserting Order: {order.Id}");
 
-        await _collection.ReplaceOneAsync(
-            filter: Builders<ProjectedOrder>.Filter.Eq(o => o.Id, order.Id),
-            replacement: projected,
-            options: new ReplaceOptions { IsUpsert = true },
-            cancellationToken: cancellationToken
-        );
+            var projected = new OrderReadModel
+            {
+                Id = order.Id,
+                CustomerId = order.CustomerId,
+                CreatedAt = order.CreatedAt,
+                ShippingAddress = new AddressDto
+                {
+                    Street = order.ShippingAddress.Street,
+                    City = order.ShippingAddress.City,
+                    State = order.ShippingAddress.State,
+                    Country = order.ShippingAddress.Country,
+                    ZipCode = order.ShippingAddress.ZipCode
+                },
+                Items = order.Items.Select(item => new OrderItemReadModel
+                {
+                    ProductId = item.ProductId,
+                    ProductName = item.ProductName,
+                    Quantity = item.Quantity
+                }).ToList()
+            };
+
+            await _collection.ReplaceOneAsync(
+                filter: Builders<OrderReadModel>.Filter.Eq(o => o.Id, order.Id),
+                replacement: projected,
+                options: new ReplaceOptions { IsUpsert = true },
+                cancellationToken: cancellationToken
+            );
+
+            Console.WriteLine($"[Mongo] Order {order.Id} inserted/updated successfully");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"❌ Mongo insert failed: {ex.Message}");
+        }
     }
 
-    public async Task<ProjectedOrder?> GetByIdAsync(Guid orderId, CancellationToken cancellationToken)
+    public async Task<OrderReadModel?> GetByIdAsync(Guid orderId, CancellationToken cancellationToken)
     {
-        var filter = Builders<ProjectedOrder>.Filter.Eq(o => o.Id, orderId);
+        var filter = Builders<OrderReadModel>.Filter.Eq(o => o.Id, orderId);
         return await _collection.Find(filter).FirstOrDefaultAsync(cancellationToken);
     }
 }

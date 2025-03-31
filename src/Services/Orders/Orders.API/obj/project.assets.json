@@ -1321,12 +1321,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.3.0": {
+      "MongoDB.Driver/3.2.1": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.3.0",
+          "MongoDB.Bson": "3.2.1",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -2111,6 +2111,9 @@
       "EcommerceModular.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
         "compile": {
           "bin/placeholder/EcommerceModular.Domain.dll": {}
         },
@@ -4580,10 +4583,10 @@
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/3.3.0": {
-      "sha512": "1EVdMMTsUllMJC+4BPQlcxGzn1pB43vAQ03VCx0QpfbhzaYTqnuHKBp3rAPG5aSo2az4JXKXwrQca7GhP/NhUQ==",
+    "MongoDB.Driver/3.2.1": {
+      "sha512": "ynT4Mc0ilT+DSQBbobfORqCWqm5UdHIX3Nc59oQH3XbPi43jKiqf7SK8NLBmQsB6RJBJPR+WdIeNLtzyLj3U3g==",
       "type": "package",
-      "path": "mongodb.driver/3.3.0",
+      "path": "mongodb.driver/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4594,7 +4597,7 @@
         "lib/net6.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.3.3.0.nupkg.sha512",
+        "mongodb.driver.3.2.1.nupkg.sha512",
         "mongodb.driver.nuspec",
         "packageIcon.png"
       ]
@@ -5774,7 +5777,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.3",
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 9.0.2",
-      "MongoDB.Driver >= 3.3.0",
+      "MongoDB.Bson >= 3.3.0",
+      "MongoDB.Driver >= 3.2.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
       "Redoc.AspNetCore >= 1.0.0",
       "Serilog >= 4.2.0",
@@ -5876,9 +5880,13 @@
             "target": "Package",
             "version": "[9.0.2, )"
           },
-          "MongoDB.Driver": {
+          "MongoDB.Bson": {
             "target": "Package",
             "version": "[3.3.0, )"
+          },
+          "MongoDB.Driver": {
+            "target": "Package",
+            "version": "[3.2.1, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",

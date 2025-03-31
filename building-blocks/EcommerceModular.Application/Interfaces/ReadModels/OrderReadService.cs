@@ -1,55 +1,48 @@
 using System.Text.Json;
 using EcommerceModular.Application.Orders.Projections;
-using EcommerceModular.Domain.Entities;
 using Microsoft.Extensions.Caching.Distributed;
 using MongoDB.Driver;
 
 namespace EcommerceModular.Application.Interfaces.ReadModels;
 
-public class OrderReadService(IMongoClient mongoClient, IDistributedCache cache) : IOrderReadService
+public class OrderReadService(
+    IDistributedCache cache,
+    IMongoClient mongoClient)
+    : IOrderReadService
 {
-    private readonly IMongoCollection<OrderReadModel> _orderCollection = mongoClient
-        .GetDatabase("orders_read")
-        .GetCollection<OrderReadModel>("orders");
+    private readonly IMongoCollection<OrderReadModel> _collection =
+        mongoClient
+            .GetDatabase("orders_read")
+            .GetCollection<OrderReadModel>("orders");
 
     public async Task<OrderReadModel?> GetOrderByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var cacheKey = $"order:{id}";
 
+        // ✅ 1. Tenta pegar do Redis
         var cached = await cache.GetStringAsync(cacheKey, cancellationToken);
-        if (cached is not null)
+        if (!string.IsNullOrWhiteSpace(cached))
         {
             return JsonSerializer.Deserialize<OrderReadModel>(cached);
         }
 
-        var order = await _orderCollection.Find(x => x.Id == id).FirstOrDefaultAsync(cancellationToken);
+        // ✅ 2. Fallback: consulta no MongoDB
+        var order = await _collection
+            .Find(o => o.Id == id)
+            .FirstOrDefaultAsync(cancellationToken);
 
+        // ✅ 3. Se achou no Mongo, salva no Redis para próximas leituras
         if (order is not null)
         {
-            var serialized = JsonSerializer.Serialize(order);
-            await cache.SetStringAsync(cacheKey, serialized, new DistributedCacheEntryOptions
+            var options = new DistributedCacheEntryOptions
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(15)
-            }, cancellationToken);
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+            };
+
+            var serialized = JsonSerializer.Serialize(order);
+            await cache.SetStringAsync(cacheKey, serialized, options, cancellationToken);
         }
 
         return order;
-    }
-
-    private static OrderReadModel MapToReadModel(Order order)
-    {
-        return new OrderReadModel
-        {
-            Id = order.Id,
-            CustomerId = order.CustomerId,
-            CreatedAt = order.CreatedAt,
-            ShippingCity = order.ShippingAddress.City,
-            Items = order.Items.Select(i => new OrderItemReadModel
-            {
-                ProductId = i.ProductId,
-                ProductName = i.ProductName,
-                Quantity = i.Quantity
-            }).ToList()
-        };
     }
 }

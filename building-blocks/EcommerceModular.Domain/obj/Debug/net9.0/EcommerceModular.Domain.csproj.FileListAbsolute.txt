@@ -13,6 +13,7 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.deps.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.pdb
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.csproj.AssemblyReference.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.GeneratedMSBuildEditorConfig.editorconfig
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.AssemblyInfoInputs.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.AssemblyInfo.cs

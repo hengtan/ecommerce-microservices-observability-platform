@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FABNXpSzzgs=",
+  "dgSpecHash": "xGXznT94TIg=",
   "success": true,
   "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/tests/Orders.Application.Tests/Orders.Application.Tests.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,7 @@
     "/Users/hengtan/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/mongodb.bson/3.2.1/mongodb.bson.3.2.1.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/mongodb.driver/3.2.1/mongodb.driver.3.2.1.nupkg.sha512",
-    "/Users/hengtan/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/nsubstitute/5.3.0/nsubstitute.5.3.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/nunit/4.2.2/nunit.4.2.2.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/nunit.analyzers/4.3.0/nunit.analyzers.4.3.0.nupkg.sha512",

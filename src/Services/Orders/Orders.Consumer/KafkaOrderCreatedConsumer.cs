@@ -1,52 +1,75 @@
+using System.Text.Json;
 using Confluent.Kafka;
+using EcommerceModular.Application.Interfaces.Messaging;
 using EcommerceModular.Application.Interfaces.Persistence;
 using EcommerceModular.Domain.Entities;
-using JsonConvert = Newtonsoft.Json.JsonConvert;
+using Newtonsoft.Json;
+using Orders.Consumer.Dtos;
 
 namespace Orders.Consumer;
 
-public class KafkaOrderCreatedConsumer(ILogger<KafkaOrderCreatedConsumer> logger, IServiceProvider serviceProvider)
-    : BackgroundService
+public class KafkaOrderCreatedConsumer(
+    ILogger<KafkaOrderCreatedConsumer> logger,
+    IOrderReadProjection projection,
+    IConfiguration configuration)
+    : IKafkaOrderCreatedConsumer
 {
-    private readonly string _topic = "orders.created";
-    private readonly string _groupId = "orders-consumer-group";
-
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    private readonly ConsumerConfig _config = new()
     {
-        var config = new ConsumerConfig
-        {
-            BootstrapServers = "localhost:9092",
-            GroupId = _groupId,
-            AutoOffsetReset = AutoOffsetReset.Earliest
-        };
+        BootstrapServers = configuration["Kafka:BootstrapServers"],
+        GroupId = configuration["Kafka:GroupId"] ?? "orders-consumer-group",
+        AutoOffsetReset = AutoOffsetReset.Earliest,
+        EnableAutoCommit = true
+    };
+    private readonly string _topic = configuration["Kafka:Topic"] ?? "orders.created";
 
-        using var consumer = new ConsumerBuilder<Ignore, string>(config).Build();
+    public async Task ConsumeAsync(CancellationToken cancellationToken)
+    {
+        Console.WriteLine("🔥 Kafka consumer started");
+
+        using var consumer = new ConsumerBuilder<Ignore, string>(_config).Build();
         consumer.Subscribe(_topic);
 
-        logger.LogInformation("Kafka consumer started, listening on topic: {Topic}", _topic);
-
-        while (!stoppingToken.IsCancellationRequested)
+        while (!cancellationToken.IsCancellationRequested)
         {
             try
             {
-                var result = consumer.Consume(stoppingToken);
-                var message = result.Message.Value;
+                var consumeResult = consumer.Consume(cancellationToken);
+                Console.WriteLine($"✅ Received: {consumeResult.Message.Value}");
 
-                logger.LogInformation("Received message: {Message}", message);
+                var dto = JsonConvert.DeserializeObject<OrderDto>(consumeResult.Message.Value);
 
-                var order = JsonConvert.DeserializeObject<Order>(message);
-
-                if (order is not null)
+                if (dto is null)
                 {
-                    using var scope = serviceProvider.CreateScope();
-                    var projection = scope.ServiceProvider.GetRequiredService<IOrderReadProjection>();
-
-                    await projection.ProjectAsync(order, stoppingToken);
+                    Console.WriteLine("❌ Error deserializing JSON into OrderDto");
+                    return;
                 }
+
+                // Cria o domínio Order a partir do DTO
+                var order = new Order(
+                    customerId: dto.CustomerId.ToString(), // 👈 Aqui converte Guid para string
+                    shippingAddress: new Address(
+                        dto.ShippingAddress.Street,
+                        dto.ShippingAddress.City,
+                        dto.ShippingAddress.State,
+                        dto.ShippingAddress.Country,
+                        dto.ShippingAddress.ZipCode
+                    ),
+                    items: dto.Items.Select(i =>
+                            new OrderItem(i.ProductId, i.ProductName, i.Quantity, 0) // Aqui o preço pode ser 0 por enquanto
+                    ).ToList()
+                );
+
+                // Seta manualmente o OrderId, pois o construtor gera um novo
+                typeof(Order).GetProperty("Id")!.SetValue(order, dto.OrderId);
+
+                Console.WriteLine($"📦 Parsed order: {order.Id}");
+
+                await projection.ProjectAsync(order, cancellationToken);
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error processing Kafka message");
+                Console.WriteLine($"❌ Error: {ex.Message}");
             }
         }
 

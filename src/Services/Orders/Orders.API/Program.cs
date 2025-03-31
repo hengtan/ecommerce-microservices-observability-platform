@@ -17,6 +17,10 @@ using Prometheus;
 using Serilog;
 using Serilog.Events;
 
+// Registrar serializadores padrão com representação correta
+BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
+BsonSerializer.RegisterSerializer(new NullableSerializer<Guid>(new GuidSerializer(GuidRepresentation.Standard)));
+
 var builder = WebApplication.CreateBuilder(args);
 
 // ✅ Serilog
@@ -34,18 +38,15 @@ builder.Host.UseSerilog();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
-// ✅ MongoDB Client
+// ✅ MongoDB Client com GuidRepresentation
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
     var connectionString = builder.Configuration["MongoSettings:ConnectionString"];
-    return new MongoClient(connectionString);
+    var mongoUrl = new MongoUrl(connectionString);
+    var settings = MongoClientSettings.FromUrl(mongoUrl);
+    
+    return new MongoClient(settings);
 });
-
-// ✅ Registra o serializador de GUID
-if (!BsonClassMap.IsClassMapRegistered(typeof(Guid)))
-{
-    BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
-}
 
 // ✅ Leitura de pedidos e Kafka producer
 builder.Services.AddScoped<IOrderReadService, OrderReadService>();
@@ -60,33 +61,45 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => c.EnableAnnotations());
 
 // ✅ Health Checks
-builder.Services.AddHealthChecks()
-    .AddNpgSql(
-        builder.Configuration.GetConnectionString("DefaultConnection")!,
-        name: "postgresql",
-        timeout: TimeSpan.FromSeconds(5),
-        tags: new[] { "db", "sql" }
-    )
-    .AddMongoDb(
-        sp => new MongoClient(builder.Configuration["MongoSettings:ConnectionString"]),
-        name: "mongodb",
-        timeout: TimeSpan.FromSeconds(5),
-        tags: new[] { "db", "mongo" }
-    )
-    .AddRedis(
-        builder.Configuration.GetConnectionString("Redis")!,
-        name: "redis",
-        timeout: TimeSpan.FromSeconds(5),
-        tags: ["cache", "redis"]
-    );
+// builder.Services.AddHealthChecks()
+//     .AddNpgSql(
+//         builder.Configuration.GetConnectionString("DefaultConnection")!,
+//         name: "postgresql",
+//         timeout: TimeSpan.FromSeconds(5),
+//         tags: new[] { "db", "sql" }
+//     )
+//     .AddMongoDb(
+//         sp => sp.GetRequiredService<IMongoClient>().GetDatabase("your-database-name"),
+//         name: "mongodb",
+//         timeout: TimeSpan.FromSeconds(5),
+//         tags: new[] { "db", "mongo" }
+//     )
+//     .AddRedis(
+//         builder.Configuration.GetConnectionString("Redis")!,
+//         name: "redis",
+//         timeout: TimeSpan.FromSeconds(5),
+//         tags: ["cache", "redis"]
+//     );
 
 var app = builder.Build();
 
 // ✅ Aplica migrations automaticamente
-using (var scope = app.Services.CreateScope())
+var retries = 5;
+while (retries > 0)
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
-    dbContext.Database.Migrate();
+    try
+    {
+        using var scope = app.Services.CreateScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        dbContext.Database.Migrate();
+        break; // Sucesso!
+    }
+    catch (Exception ex)
+    {
+        Log.Warning(ex, "Database not ready yet... retries left: {Retries}", retries);
+        retries--;
+        Thread.Sleep(3000);
+    }
 }
 
 // ✅ Prometheus
@@ -113,21 +126,21 @@ app.UseAuthorization();
 app.UseSerilogRequestLogging();
 app.MapControllers();
 
-// ✅ Health endpoints
-app.MapHealthChecks("/health/live", new HealthCheckOptions
-{
-    Predicate = _ => true,
-    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-});
-app.MapHealthChecks("/health/ready", new HealthCheckOptions
-{
-    Predicate = r => r.Tags.Contains("ready"),
-    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-});
-app.MapHealthChecks("/health", new HealthCheckOptions
-{
-    Predicate = _ => true,
-    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-});
+// // ✅ Health endpoints
+// app.MapHealthChecks("/health/live", new HealthCheckOptions
+// {
+//     Predicate = _ => true,
+//     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+// });
+// app.MapHealthChecks("/health/ready", new HealthCheckOptions
+// {
+//     Predicate = r => r.Tags.Contains("ready"),
+//     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+// });
+// app.MapHealthChecks("/health", new HealthCheckOptions
+// {
+//     Predicate = _ => true,
+//     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+// });
 
 app.Run();

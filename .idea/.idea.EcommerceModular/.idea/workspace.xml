@@ -13,21 +13,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="feat: update assembly informational version and standardize project directory paths for consistency">
+    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="˚ç">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcommerceModular.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceModular.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/Persistence/IOrderReadProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/Persistence/IOrderReadProjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/ReadModels/OrderReadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Interfaces/ReadModels/OrderReadService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Commands/CreateOrder/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Projections/IOrderReadProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Projections/IOrderReadProjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Projections/OrderReadModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Projections/OrderReadModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Application.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Application.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/EcommerceModular.Application.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/ref/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/ref/EcommerceModular.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/refint/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/refint/EcommerceModular.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Repositories/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Repositories/OrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/EcommerceModular.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/EcommerceModular.Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/EcommerceModular.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/EcommerceModular.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/Events/OrderCreatedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/Events/OrderCreatedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/Models/ReadModels/ProjectedOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/Models/ReadModels/ProjectedOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/EcommerceModular.Domain.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/ref/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/ref/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/refint/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/Debug/net9.0/refint/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/EcommerceModular.Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/EcommerceModular.Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Cache/RedisOrderReadProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Cache/RedisOrderReadProjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Configurations/MongoSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Configurations/MongoSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Projections/OrderReadProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/Projections/OrderReadProjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Infrastructure.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Infrastructure.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/EcommerceModular.Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/EcommerceModular.Infrastructure.AssemblyInfo.cs" afterDir="false" />
@@ -38,6 +82,130 @@
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/EcommerceModular.Infrastructure.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/EcommerceModular.Infrastructure.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/ref/EcommerceModular.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/ref/EcommerceModular.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/refint/EcommerceModular.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/Debug/net9.0/refint/EcommerceModular.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/EcommerceModular.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/EcommerceModular.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Orders.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Orders.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/HealthChecks.MongoDb.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/HealthChecks.MongoDb.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Bson.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Bson.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Driver.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/MongoDB.Driver.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/ZstdSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/ZstdSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/refint/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/refint/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Orders.API.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/KafkaOrderCreatedConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/KafkaOrderCreatedConsumer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Orders.Consumer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Orders.Consumer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/Worker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/EcommerceModular.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.CommandLine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.CommandLine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.UserSecrets.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Configuration.UserSecrets.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Hosting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Hosting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Configuration.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Configuration.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Console.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Console.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Bson.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Bson.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Driver.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/MongoDB.Driver.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/ZstdSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/ZstdSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/ref/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/ref/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/refint/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/refint/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Orders.Consumer.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Orders.Consumer.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Orders.Consumer.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Orders.Consumer.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Orders.Consumer.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Orders.Consumer.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/CreateOrderCommandHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/CreateOrderCommandHandlerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/EcommerceModular.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Orders.Application.Tests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Orders.Application.Tests.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Orders.Application.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Orders.Application.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Orders.Application.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/bin/Debug/net9.0/Orders.Application.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/Orders.Application.Tests.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/ref/Orders.Application.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/ref/Orders.Application.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/refint/Orders.Application.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Debug/net9.0/refint/Orders.Application.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Orders.Application.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/Orders.Application.Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Orders.Application.Tests/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +219,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/473d97221b573ab97e6e745d8adae8b9e95a666539d6ed3cc8566b245d93a/ArgumentNullException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b9ef0955b90cd90f6838d866ade6191e884783cff47113b862dd93ace4c1247/HealthCheckEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/621526284d3e4868b98948aff942206525763e57e194a27623b66c384466/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/802aa3defbed8cb8292d47932e78e3f44c225e2bbf3181a786ed660492fa66/MongoClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93b441a9e8201c5bdfa1b1fdc8061a77b86ccbb8566d7bae85036aba8c618f7/IDatabaseAsync.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e8bc77d296dbfa0f7a2456d5ae46ce4fe6113f975e32755c54f64bd5a39c/BackgroundService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/building-blocks/EcommerceModular.Domain/Entities/Address.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.KafkaConsumer/KafkaConsumerWorker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.KafkaConsumer/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -78,8 +251,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.Orders.API: http.executor": "Run",
+    ".NET Launch Settings Profile.Orders.API: http.executor": "Debug",
     ".NET Launch Settings Profile.Orders.API: https.executor": "Debug",
+    ".NET Launch Settings Profile.Orders.KafkaConsumer.executor": "Run",
     ".NET Project.Orders.API.executor": "Run",
     "Notification.DisplayName-DoNotAsk-Plugin Update Results": "Plugins installed or updated",
     "Notification.DisplayName-DoNotAsk-Plugins Suggestion": "Plugin suggestions available",
@@ -104,7 +278,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Orders.API: https">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Orders.API: http">
     <configuration name="Orders.API" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -172,7 +346,7 @@
       </method>
     </configuration>
     <configuration name="Orders.Consumer" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Orders.Consumer/Orders.Consumer.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/services/Orders/Orders.Consumer/Orders.Consumer.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
       <option name="LAUNCH_PROFILE_NAME" value="Orders.Consumer" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -187,9 +361,9 @@
       </method>
     </configuration>
     <configuration name="Orders.KafkaConsumer" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/Services/Orders/Orders.KafkaConsumer/Orders.KafkaConsumer.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/services/Orders/Orders.Consumer/Orders.Consumer.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="Orders.KafkaConsumer" />
+      <option name="LAUNCH_PROFILE_NAME" value="Orders.Consumer" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -257,7 +431,8 @@
       <workItem from="1743045508378" duration="19648000" />
       <workItem from="1743191057143" duration="383000" />
       <workItem from="1743191515485" duration="6624000" />
-      <workItem from="1743273658874" duration="10224000" />
+      <workItem from="1743273658874" duration="31417000" />
+      <workItem from="1743388684687" duration="8138000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update API configuration and add PostgreSQL connection strings&#10;changing to building-blocks session">
       <option name="closed" value="true" />
@@ -475,7 +650,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743309562150</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: refactor OrderRepository constructor and update assembly informational version for consistency">
+      <option name="closed" value="true" />
+      <created>1743364635450</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1743364635450</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: update assembly informational version and sourcelink for consistency">
+      <option name="closed" value="true" />
+      <created>1743364716415</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1743364716415</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,8 +696,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: including strategy to calculate Total" />
-    <MESSAGE value="feat: update connection strings and add caching and database dependencies" />
     <MESSAGE value="feat: expand .gitignore to include build results, user-specific files, and various environment settings" />
     <MESSAGE value="feat: integrate Kafka for order event publishing and add related configurations" />
     <MESSAGE value="feat: add Dockerfile for building and running Orders.API service" />
@@ -530,6 +719,40 @@
     <MESSAGE value="feat: update project configuration and dependencies for improved functionality and consistency" />
     <MESSAGE value="feat: update connection strings and add Entity Framework Core packages for improved database interaction" />
     <MESSAGE value="feat: update assembly informational version and standardize project directory paths for consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update assembly informational version and standardize project directory paths for consistency" />
+    <MESSAGE value="feat: refactor OrderRepository constructor and update assembly informational version for consistency" />
+    <MESSAGE value="feat: update assembly informational version and sourcelink for consistency" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update assembly informational version and sourcelink for consistency" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/services/Orders/Orders.API/Controllers/OrdersController.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/src/services/Orders/Orders.API/Controllers/OrdersController.cs" containingFunctionPresentation="Method 'GetById'">
+            <startOffsets>
+              <option value="1354" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1355" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Queries/GetOrderById/GetOrderByIdQueryHandler.cs</url>
+          <line>10</line>
+          <properties documentPath="$PROJECT_DIR$/building-blocks/EcommerceModular.Application/Orders/Queries/GetOrderById/GetOrderByIdQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="441" />
+            </startOffsets>
+            <endOffsets>
+              <option value="442" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

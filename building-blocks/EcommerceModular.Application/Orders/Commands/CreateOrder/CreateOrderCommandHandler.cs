@@ -13,7 +13,6 @@ public class CreateOrderCommandHandler(
     IOrderRepository orderRepository,
     OrderTotalStrategySelector strategySelector,
     IEventProducer eventProducer,
-    IOrderReadProjection readProjection,
     IOrderMetrics metrics) // ✅ Injeta métrica
     : IRequestHandler<CreateOrderCommand, Guid>
 {
@@ -29,7 +28,6 @@ public class CreateOrderCommandHandler(
         Console.WriteLine($"[OrderTotal] CustomerType: {request.CustomerType}, Calculated Total: {total:C}");
 
         await PersistOrderAsync(order);
-        await ProjectReadModelAsync(order, cancellationToken);
         await PublishOrderCreatedEventAsync(order);
 
         metrics.IncrementOrdersCreated(); // 📈 incrementa métrica
@@ -64,14 +62,28 @@ public class CreateOrderCommandHandler(
         return orderRepository.AddAsync(order);
     }
 
-    private Task ProjectReadModelAsync(Order order, CancellationToken cancellationToken)
-    {
-        return readProjection.ProjectAsync(order, cancellationToken);
-    }
-
     private Task PublishOrderCreatedEventAsync(Order order)
     {
-        var orderCreatedEvent = new OrderCreatedEvent(order.Id, order.CustomerId, order.CreatedAt);
+        var orderCreatedEvent = new OrderCreatedEvent(
+            order.Id,
+            order.CustomerId,
+            order.CreatedAt,
+            new ShippingAddressDto
+            {
+                Street = order.ShippingAddress.Street,
+                City = order.ShippingAddress.City,
+                State = order.ShippingAddress.State,
+                Country = order.ShippingAddress.Country,
+                ZipCode = order.ShippingAddress.ZipCode
+            },
+            order.Items.Select(item => new OrderItemDto
+            {
+                ProductId = item.ProductId,
+                ProductName = item.ProductName,
+                Quantity = item.Quantity
+            }).ToList()
+        );
+        
         return eventProducer.ProduceAsync("orders.created", orderCreatedEvent);
     }
 }

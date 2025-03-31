@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vVu/a2U0F/8=",
+  "dgSpecHash": "0Kh/ZXrET5c=",
   "success": true,
   "projectFilePath": "/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.API/Orders.API.csproj",
   "expectedPackageFiles": [
@@ -63,7 +63,7 @@
     "/Users/hengtan/.nuget/packages/microsoft.openapi/1.6.23/microsoft.openapi.1.6.23.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/mongodb.bson/3.3.0/mongodb.bson.3.3.0.nupkg.sha512",
-    "/Users/hengtan/.nuget/packages/mongodb.driver/3.3.0/mongodb.driver.3.3.0.nupkg.sha512",
+    "/Users/hengtan/.nuget/packages/mongodb.driver/3.2.1/mongodb.driver.3.2.1.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/hengtan/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512",
