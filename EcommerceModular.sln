@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{E596746B-60CC-432E-AF2B-C3A9B8ABD7A2}"
 	ProjectSection(SolutionItems) = preProject
 		docker\docker-compose.yml = docker\docker-compose.yml
@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{E59674
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7817E40A-DF54-4F5D-894E-BFADCB870D5A}"
 EndProject
+<<<<<<< HEAD
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{B990D488-4F03-4515-93F0-483C7F4829F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{6A0C4110-BC72-4DDE-A253-25101763073D}"
@@ -15,6 +16,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.API", "src\services\Orders\Orders.API\Orders.API.csproj", "{C733EC5C-5765-4904-B0A7-8F59ECB52101}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Consumer", "src\services\Orders\Orders.Consumer\Orders.Consumer.csproj", "{54B081F5-E3C7-48E8-BE2A-4DA343A0CF8A}"
+=======
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B990D488-4F03-4515-93F0-483C7F4829F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{6A0C4110-BC72-4DDE-A253-25101763073D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.API", "src\Services\Orders\Orders.API\Orders.API.csproj", "{C733EC5C-5765-4904-B0A7-8F59ECB52101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Consumer", "src\Services\Orders\Orders.Consumer\Orders.Consumer.csproj", "{54B081F5-E3C7-48E8-BE2A-4DA343A0CF8A}"
+>>>>>>> 2ecb20b (fix: standardize project paths and update assembly informational version for Orders services)
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

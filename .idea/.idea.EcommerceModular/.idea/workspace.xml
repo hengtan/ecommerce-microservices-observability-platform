@@ -13,7 +13,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="chore: update assembly informational version and project directory paths for Orders services" />
+    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="chore: update assembly informational version and project directory paths for Orders services">
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/ref/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/refint/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/refint/Orders.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/ref/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/ref/Orders.Consumer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/refint/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/refint/Orders.Consumer.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +53,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99e8bc77d296dbfa0f7a2456d5ae46ce4fe6113f975e32755c54f64bd5a39c/BackgroundService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/building-blocks/EcommerceModular.Application/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/bin/Debug/net9.0/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.Consumer/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/services/Orders/Orders.KafkaConsumer/KafkaConsumerWorker.cs" root0="SKIP_HIGHLIGHTING" />

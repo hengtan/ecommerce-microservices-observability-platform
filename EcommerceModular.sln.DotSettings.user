@@ -14,4 +14,5 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::7AA5EAE9-11B8-4BD9-9BF3-BC527C92D803::net9.0::Orders.Application.Tests.CreateOrderCommandHandlerTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>
