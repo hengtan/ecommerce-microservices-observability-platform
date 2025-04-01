@@ -13,9 +13,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="fix: update workspace.xml for consistent property formatting" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -484,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743397165730</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix: update workspace.xml for consistent property formatting">
+      <option name="closed" value="true" />
+      <created>1743521132558</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1743521132558</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,8 +520,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: integrate Kafka for order event publishing and add related configurations" />
-    <MESSAGE value="feat: add Dockerfile for building and running Orders.API service" />
     <MESSAGE value="feat: add Kafka configuration and dependencies for event handling" />
     <MESSAGE value="feat: add MongoDB configuration and dependencies for data storage" />
     <MESSAGE value="feat: update assembly informational version and sourcelink references for Orders.API and EcommerceModular" />
@@ -539,7 +543,9 @@
     <MESSAGE value="feat: refactor OrderRepository constructor and update assembly informational version for consistency" />
     <MESSAGE value="feat: update assembly informational version and sourcelink for consistency" />
     <MESSAGE value="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add Order and Address DTOs, update OrderCreatedEvent, and enhance Kafka consumer with new configurations&#10;&#10;segregate Postgre -&gt; Mongo -&gt; Redis" />
+    <MESSAGE value="feat: lfs" />
+    <MESSAGE value="fix: update workspace.xml for consistent property formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update workspace.xml for consistent property formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
