@@ -13,11 +13,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="chore: update assembly informational version and project directory paths for Orders services">
+    <list default="true" id="220f9f1a-8af0-48b7-a8ea-41112df1e899" name="Changes" comment="fix: standardize project paths and update assembly informational version for Orders services">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EcommerceModular/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/bin/Debug/net9.0/Orders.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.API/obj/Debug/net9.0/Orders.API.sourcelink.json" afterDir="false" />
@@ -27,6 +30,8 @@
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/bin/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Orders/Orders.Consumer/obj/Debug/net9.0/Orders.Consumer.sourcelink.json" afterDir="false" />
@@ -527,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743521726102</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fix: standardize project paths and update assembly informational version for Orders services">
+      <option name="closed" value="true" />
+      <created>1743522711017</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1743522711017</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,8 +570,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: update assembly informational version and sourcelink references for Orders.API and EcommerceModular" />
-    <MESSAGE value="feat: add Docker Compose configuration for Kafka, MongoDB, Postgres, Redis, and Orders services" />
     <MESSAGE value="feat: update assembly informational version and sourcelink references for multiple projects" />
     <MESSAGE value="feat: update workspace configuration and add highlighting settings for Orders.API" />
     <MESSAGE value="feat: add Prometheus monitoring support to Orders.API and update assembly informational versions" />
@@ -582,7 +593,9 @@
     <MESSAGE value="fix: update workspace.xml for consistent property formatting" />
     <MESSAGE value="fix: update solution and workspace files for project structure consistency" />
     <MESSAGE value="chore: update assembly informational version and project directory paths for Orders services" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update assembly informational version and project directory paths for Orders services" />
+    <MESSAGE value="fix: update .sln paths for Linux compatibility" />
+    <MESSAGE value="fix: standardize project paths and update assembly informational version for Orders services" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: standardize project paths and update assembly informational version for Orders services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

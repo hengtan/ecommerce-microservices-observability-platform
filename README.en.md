@@ -1,6 +1,6 @@
 
 <p align="right">
-🌐 <a href="README.en.md">View this in English</a>
+🇧🇷 <a href="README.md">Leia em Português</a>
 </p>
 
 # 🛒 EcommerceModular - Microservices Observability Platform
@@ -14,27 +14,27 @@
 ![Test Coverage](https://img.shields.io/badge/Test%20Coverage-100%25-success?logo=testinglibrary)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-> Uma arquitetura moderna, modular e escalável para e-commerce usando o que há de mais atual em tecnologia .NET!
+> A modern, modular, and scalable e-commerce architecture built on .NET with observability and best practices in mind.
 
 ---
 
-## 📦 Visão Geral
+## 📦 Overview
 
-A **EcommerceModular** é uma plataforma de e-commerce baseada em **microserviços** com foco em:
+**EcommerceModular** is a microservices-based e-commerce platform focused on:
 
-- Alta escalabilidade
-- Observabilidade desde o dia 1
-- Boas práticas arquiteturais (DDD, Clean Architecture, CQRS)
-- Comunicação assíncrona com **Kafka**
-- Projeções eficientes com **MongoDB**
-- Cache otimizado com **Redis**
-- Persistência com **PostgreSQL**
-- Testes e cobertura completos
-- Docker-ready para produção
+- High scalability and fault-tolerance
+- Out-of-the-box observability
+- Clean architecture principles: DDD, CQRS, Event Sourcing
+- Async communication using **Kafka**
+- Efficient read projections with **MongoDB**
+- Caching with **Redis**
+- Durable persistence with **PostgreSQL**
+- Complete unit and integration test coverage
+- Fully containerized with Docker
 
 ---
 
-## 🧱 Arquitetura
+## 🧱 Architecture
 
 ```plaintext
                          +------------------------+
@@ -59,62 +59,61 @@ A **EcommerceModular** é uma plataforma de e-commerce baseada em **microserviç
 
 ---
 
-## 🧪 Testes
+## 🧪 Testing
 
 - ✅ Framework: **NUnit**
-- ✅ Geração de dados fake: **Bogus**
-- ✅ Cobertura de testes: **100%** via **Coverlet**
-- ✅ Relatório visual: **ReportGenerator**
-- ✅ Retry e circuit breaker com **Polly**
+- ✅ Fake data generation: **Bogus**
+- ✅ 100% code coverage via **Coverlet**
+- ✅ Visual reports with **ReportGenerator**
+- ✅ Retry & circuit breaker policies with **Polly**
 
 ---
 
-## 📈 Observabilidade
+## 📈 Observability
 
-- 📦 **Serilog** para logs estruturados (console + arquivos)
-- 📊 **Prometheus** para coleta de métricas (em breve)
-- 📺 **Grafana** com dashboards técnicos (em breve)
-- 🔎 **Elastic Stack (Elasticsearch + Kibana)** para logs detalhados (planejado)
-- 📡 **OpenTelemetry + Jaeger** para rastreamento distribuído (planejado)
+- 🟦 Structured logging with **Serilog**
+- 📊 Metrics collection with **Prometheus** (coming soon)
+- 📈 Dashboards via **Grafana** (coming soon)
+- 🔎 Full log search via **Elastic Stack** (planned)
+- 🛰️ Distributed tracing with **OpenTelemetry + Jaeger** (planned)
 
 ---
 
-## 🧩 Módulos e Serviços
+## 🧩 Modules and Services
 
 ### 🧾 `Orders.API`
-- Criação de pedidos via `POST /api/orders`
-- Consulta por ID via `GET /api/orders/{id}`
-- Cálculo do total com Strategy Pattern baseado no tipo de cliente
-- Leitura com fallback: Redis → MongoDB (padrão **cache-aside**)
+- Create orders with `POST /api/orders`
+- Get orders by ID via `GET /api/orders/{id}`
+- Total calculated using Strategy Pattern based on customer type
+- Read access with fallback: Redis → MongoDB (**cache-aside**)
 
 ### 📥 `Orders.Consumer`
-- Kafka Consumer assíncrono (`BackgroundService`)
-- Escuta do tópico `orders.created`
-- Projeção dos dados em **MongoDB**
-- Integração com Redis (quando aplicável)
+- Kafka Consumer using `BackgroundService`
+- Listens to topic `orders.created`
+- Saves projections into **MongoDB**
+- Can populate Redis when needed
 
 ### 💾 `RedisOrderReadProjection`
-- Decora leitura da projeção para utilizar Redis como cache primário
-- Fallback em MongoDB com atualização automática do cache
+- Decorates read projection layer to use Redis cache first
+- Automatically updates cache from MongoDB on cache miss
 
 ---
 
-## 🧰 Tecnologias e Ferramentas
+## 🧰 Tech Stack
 
 - ✅ **.NET 9.0**
 - ✅ **ASP.NET Core Web API**
-- ✅ **Kafka** (via Bitnami no Docker)
+- ✅ **Kafka** (via Bitnami)
 - ✅ **MongoDB** (read model)
 - ✅ **Redis** (cache)
 - ✅ **PostgreSQL** (write model)
 - ✅ **Docker + Docker Compose**
-- ✅ **Serilog** para logs estruturados
-- ✅ **CI/CD** com GitHub Actions (pipeline configurado)
-- ✅ **Health Checks**, **Swagger**, e muito mais...
+- ✅ **Serilog** for logging
+- ✅ **GitHub Actions** for CI/CD
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## 🗂️ Project Structure
 
 ```
 EcommerceModular/
@@ -142,22 +141,22 @@ EcommerceModular/
 
 ---
 
-## 🚀 Como rodar localmente
+## 🚀 Getting Started
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/seu-user/ecommerce-microservices-observability-platform.git
+git clone https://github.com/your-username/ecommerce-microservices-observability-platform.git
 cd ecommerce-microservices-observability-platform
 ```
 
-2. Suba os containers com Docker Compose:
+2. Launch services with Docker Compose:
 
 ```bash
 docker-compose up -d
 ```
 
-3. Execute a API:
+3. Run the API:
 
 ```bash
 dotnet run --project services/Orders/Orders.API/Orders.API.csproj
@@ -165,31 +164,31 @@ dotnet run --project services/Orders/Orders.API/Orders.API.csproj
 
 ---
 
-## ✅ Roadmap (Próximos Passos)
+## ✅ Roadmap
 
-- [ ] Criar serviços `Products`, `Payments` e `Notifications`
-- [ ] Adicionar rastreamento com OpenTelemetry + Jaeger
-- [ ] Integrar com Grafana e Prometheus
-- [ ] Incluir Elastic Stack (logs ricos)
-- [ ] Criar front-end em **React + Tailwind**
-- [ ] Preparar deploy real com **Kubernetes**
-- [ ] Pipeline completo de CI/CD
-
----
-
-## 👩‍💻 Desenvolvido por
-
-**hengtan** – Desenvolvedora .NET apaixonada por arquitetura limpa, sistemas resilientes e observabilidade real.  
-💻🚀 *Let's build systems that scale and shine.*
+- [ ] Add `Products`, `Payments`, and `Notifications` services
+- [ ] Add tracing support with OpenTelemetry + Jaeger
+- [ ] Integrate Prometheus and Grafana dashboards
+- [ ] Enable Elastic Stack (Kibana + Elasticsearch)
+- [ ] Front-end in **React + Tailwind**
+- [ ] Production-ready deployment with **Kubernetes**
+- [ ] Full CI/CD automation
 
 ---
 
-## 🌟 Contribua!
+## 👩‍💻 Developed by
 
-Se esse projeto te inspirou ou te ajudou, ⭐ marque com uma estrela, fork e contribua!
+**Isabela** – A passionate .NET developer focused on clean code, scalable architecture, and real observability.  
+💻🚀 *Let’s build systems that scale and shine.*
 
 ---
 
-## 📜 Licença
+## 🌟 Contribute
 
-Este projeto está sob a licença MIT.
+If you like this project, star it ⭐, fork it 🍴, and contribute! PRs welcome 🙌
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
