@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          path: ecommerce-microservices-observability-platform
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -22,12 +24,15 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: ecommerce-microservices-observability-platform
 
       - name: Build
         run: dotnet build --no-restore --configuration Debug
+        working-directory: ecommerce-microservices-observability-platform
 
       - name: Test with coverage
         run: dotnet test --no-build --configuration Debug --collect:"XPlat Code Coverage"
+        working-directory: ecommerce-microservices-observability-platform
 
       - name: Generate coverage report
         uses: danielpalme/ReportGenerator-GitHub-Action@5.1.25
@@ -40,4 +45,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: coveragereport
+          path: ecommerce-microservices-observability-platform/coveragereport
