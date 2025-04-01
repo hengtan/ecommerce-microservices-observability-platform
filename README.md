@@ -1,3 +1,10 @@
+<p align="right">
+🌐 <a href="README.en.md">View in English</a>
+</p>
+
+<p align="right">
+🇧🇷 <a href="README.md">Ver em Português</a>
+</p>
 
 # 🛒 EcommerceModular - Microservices Observability Platform
 
