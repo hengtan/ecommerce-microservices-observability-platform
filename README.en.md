@@ -178,7 +178,7 @@ dotnet run --project services/Orders/Orders.API/Orders.API.csproj
 
 ## 👩‍💻 Developed by
 
-**Isabela** – A passionate .NET developer focused on clean code, scalable architecture, and real observability.  
+**hengtan** – A passionate .NET developer focused on clean code, scalable architecture, and real observability.  
 💻🚀 *Let’s build systems that scale and shine.*
 
 ---
