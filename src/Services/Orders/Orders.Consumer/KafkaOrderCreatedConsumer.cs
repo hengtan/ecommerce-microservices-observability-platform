@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Confluent.Kafka;
 using EcommerceModular.Application.Interfaces.Messaging;
 using EcommerceModular.Application.Interfaces.Persistence;
@@ -21,6 +20,7 @@ public class KafkaOrderCreatedConsumer(
         AutoOffsetReset = AutoOffsetReset.Earliest,
         EnableAutoCommit = true
     };
+
     private readonly string _topic = configuration["Kafka:Topic"] ?? "orders.created";
 
     public async Task ConsumeAsync(CancellationToken cancellationToken)
@@ -56,7 +56,8 @@ public class KafkaOrderCreatedConsumer(
                         dto.ShippingAddress.ZipCode
                     ),
                     items: dto.Items.Select(i =>
-                            new OrderItem(i.ProductId, i.ProductName, i.Quantity, 0) // Aqui o preço pode ser 0 por enquanto
+                            new OrderItem(i.ProductId, i.ProductName, i.Quantity,
+                                0) // Aqui o preço pode ser 0 por enquanto
                     ).ToList()
                 );
 

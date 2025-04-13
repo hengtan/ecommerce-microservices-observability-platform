@@ -16,8 +16,8 @@ public class OrderDto
     public DateTime CreatedAt { get; set; }
 
     [JsonProperty("ShippingAddress")]
-    public ShippingAddressDto ShippingAddress { get; set; }
+    public ShippingAddressDto? ShippingAddress { get; set; }
 
     [JsonProperty("Items")]
-    public List<OrderItemDto> Items { get; set; }
+    public List<OrderItemDto>? Items { get; set; }
 }

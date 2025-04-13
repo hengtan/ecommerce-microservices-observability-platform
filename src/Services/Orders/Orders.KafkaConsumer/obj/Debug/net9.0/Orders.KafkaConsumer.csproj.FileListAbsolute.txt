@@ -1,8 +1,8 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/appsettings.Development.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/appsettings.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer.deps.json
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer.runtimeconfig.json
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer.deps.json
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer.runtimeconfig.json
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Orders.KafkaConsumer.pdb
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Confluent.Kafka.dll
@@ -36,6 +36,7 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/MongoDB.Bson.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/MongoDB.Driver.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Newtonsoft.Json.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/SharpCompress.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Snappier.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/System.Diagnostics.EventLog.dll
@@ -74,9 +75,14 @@
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.AssemblyInfo.cs
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.csproj.CoreCompileInputs.cache
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.sourcelink.json
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.K.289BFA23.Up2Date
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.K.289BFA23.Up2Date
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/refint/Orders.KafkaConsumer.dll
 /Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.pdb
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.genruntimeconfig.cache
-/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/Services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/ref/Orders.KafkaConsumer.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/Orders.KafkaConsumer.genruntimeconfig.cache
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/obj/Debug/net9.0/ref/Orders.KafkaConsumer.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/hengtan/RiderProjects/ecommerce-microservices-observability-platform/src/services/Orders/Orders.KafkaConsumer/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
