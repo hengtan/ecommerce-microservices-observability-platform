@@ -1,4 +1,97 @@
-Archive.zip
-Archive.zip
-Archive.zip
-Archive.zip
+########################
+# GERAL PARA .NET/C#
+########################
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vspscc
+*.vssscc
+*.ncrunch*
+*.ide
+
+########################
+# RIDER / JETBRAINS
+########################
+.idea/
+*.DotSettings*
+*.sln.iml
+
+########################
+# SISTEMA / TEMP
+########################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+
+########################
+# LOGS / COVERAGE / REPORTS
+########################
+TestResult*/  
+coverage*/  
+*.coverage  
+*.coveragexml  
+*.code-coverage  
+*.trx  
+*.log  
+*.tlog  
+
+########################
+# DOCKER E INFRA
+########################
+.env
+docker-compose.override.yml
+infra/
+monitoring/
+volumes/
+
+########################
+# TOOLS / CI/CD
+########################
+.vscode/
+.vs/
+*.ps1
+*.sh
+*.cmd
+*.bat
+
+########################
+# BUILD OUTPUT
+########################
+*.dll
+*.exe
+*.pdb
+*.cache
+*.mdb
+
+########################
+# NUGET
+########################
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+########################
+# NPM/YARN (caso use frontend futuramente)
+########################
+node_modules/
+dist/
+build/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+########################
+# TESTS / PLAYWRIGHT
+########################
+playwright-report/
+test-results/
