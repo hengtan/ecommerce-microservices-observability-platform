@@ -1,97 +1,93 @@
-########################
-# GERAL PARA .NET/C#
-########################
+##########################################
+# DOTNET: binário, restore, build
+##########################################
 bin/
 obj/
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-*.vspscc
-*.vssscc
-*.ncrunch*
-*.ide
-
-########################
-# RIDER / JETBRAINS
-########################
-.idea/
-*.DotSettings*
-*.sln.iml
-
-########################
-# SISTEMA / TEMP
-########################
-.DS_Store
-Thumbs.db
-ehthumbs.db
-desktop.ini
-*.log
-*.tmp
-*.bak
-
-########################
-# LOGS / COVERAGE / REPORTS
-########################
-TestResult*/  
-coverage*/  
-*.coverage  
-*.coveragexml  
-*.code-coverage  
-*.trx  
-*.log  
-*.tlog  
-
-########################
-# DOCKER E INFRA
-########################
-.env
-docker-compose.override.yml
-infra/
-monitoring/
-volumes/
-
-########################
-# TOOLS / CI/CD
-########################
-.vscode/
-.vs/
-*.ps1
-*.sh
-*.cmd
-*.bat
-
-########################
-# BUILD OUTPUT
-########################
-*.dll
 *.exe
+*.dll
 *.pdb
 *.cache
-*.mdb
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-########################
-# NUGET
-########################
-*.nupkg
-*.snupkg
-packages/
-.nuget/
+# arquivos temporários e de cache
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.nuget.dgspec.json
+*.nuget.project.json
+*.nuget.cache
 project.lock.json
 project.fragment.lock.json
+project.assets.json
 
-########################
-# NPM/YARN (caso use frontend futuramente)
-########################
+##########################################
+# RIDER (JetBrains)
+##########################################
+.idea/
+*.DotSettings
+*.DotSettings.user
+*.sln.iml
+*.sln.DotSettings*
+*.restore.info
+workspace.xml
+.idea.*
+
+##########################################
+# SISTEMA / GERAL
+##########################################
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.bak
+*.tmp
+*.old
+*.orig
+
+##########################################
+# DOCKER
+##########################################
+docker-compose.override.yml
+.env
+.env.*
+volumes/
+**/.docker
+
+##########################################
+# INFRA / MONITORAMENTO
+##########################################
+infra/
+monitoring/
+scripts/
+*.sh
+*.ps1
+
+##########################################
+# TESTES / RELATÓRIOS
+##########################################
+TestResult*/
+coverage*/
+*.coverage
+*.coveragexml
+*.code-coverage
+*.trx
+playwright-report/
+test-results/
+
+##########################################
+# NODE (caso adicione frontend no futuro)
+##########################################
 node_modules/
 dist/
 build/
+*.tsbuildinfo
 npm-debug.log
 yarn-debug.log
-yarn-error.log
-
-########################
-# TESTS / PLAYWRIGHT
-########################
-playwright-report/
-test-results/
+.yarn/
+.pnpm-debug.log
